@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Configuration version="2.1">
+    <CanHardware device="EBxx00" connectionType="TCP" connectionString="1.2.3.4" serial="none">
+		<Channel id="0" bus="Chassis"/>
+		<Channel id="1" bus="Dynamics"/>
+		<Channel id="2" bus="NBRF"/>
+		<Channel id="3" bus="NBRR"/>
+	</CanHardware>
+	<FrHardware device="EBxx00" connectionType="TCP" connectionString="1.2.3.4" serial="none" />
+    <Animation state="off" ip="1.2.3.4" />
+	<MissionControl state="off" display="COM1"/>
+    <!-- <FrameGrabber name="STZ_UVC,A" state="off" ip="192.168.0.100" port="50505"/> -->
+</Configuration>

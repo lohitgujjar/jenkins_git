@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<Testcase descr="Manipulation des Signals ${$SIGNALNAME_ASS}" version="\$Id\$" TestEnv="2.13">
+	
+	#for $i in range($CNT)
+	<State id="${testCase.GetNextStateID()}">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="${$SET_TIME}" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="${$SIGNALNAME_ACT}" type="${$DATATYPE_ACT}" value="${$VALUES[$i][0]}" unit="${$UNIT}"/>
+		</Action>
+	</State>
+
+	<State id="${testCase.GetNextStateID()}">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="${testCase.GetNextStateID()}">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="${$CHECK_TIME}" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State${testCase.GetCurrentStateID()}_Assert${testCase.GetNextCheckID()}" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="${$SIGNALNAME_ASS}" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="${$VALUES[$i][1]}" unit=""/>
+			#if $DATATYPE_ASS == "float64"
+			<RulePara name="Tolerance" type="float" value="0.001" unit=""/>
+			#end if
+		</Rule>
+	</State>
+	#end for
+
+	<State id="${testCase.GetNextStateID()}" final="true"/>
+</Testcase>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Testcase TestEnv="2.13" descr="Test-Dri_SetEngineHood" version="" timeout="300.0">
+    <ParameterList>
+        <Parameter name="envP_RoadNetwork">
+            <Para type="string" name="RoadNetworkFile" value="rm7794.xodr" unit=""/>
+            <Para type="string" name="XlmrFile" value="rm7794.xlmr" unit=""/>
+            <Para type="string" name="Route" value="path_1" unit=""/>
+            <Para type="string" name="LandmarkStart" value="path_1_start" unit=""/>
+            <Para type="float" name="LandmarkOffset" value="0.00000" unit="m"/>
+            <Para type="enum" name="LaneSelection" value="right1" unit=""/>
+            <Para type="float" name="LaneOffset" value="0.00000" unit="m"/>
+        </Parameter>
+    </ParameterList>
+    <State id="1">
+        <Action name="Dri_PrepareVehicle"/>
+        <Event name="E_PrepareVehicle"/>
+    </State>
+    <State id="2">
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1.0" unit="s"/>
+        </Event>
+        <Rule type="SignalCmp" name="State2_Rule1">
+            <RulePara type="string" name="SignalName" value="EngHd_Pawl_Stat_ST3" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="State2_Rule2">
+            <RulePara type="string" name="SignalName" value="EngHd_Rltch_Stat_ST3" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+        </Rule>
+    </State>
+    <State id="3">
+        <Action name="Dri_SetEngineHood">
+            <ActionPara type="enum" name="Position" value="Opened" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1.0" unit="s"/>
+        </Event>
+        <Rule type="SignalCmp" name="State3_Rule1">
+            <RulePara type="string" name="SignalName" value="EngHd_Pawl_Stat_ST3" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="2" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.02" unit="s"/>
+        </Rule>
+        <Rule type="SignalCmp" name="State3_Rule2">
+            <RulePara type="string" name="SignalName" value="EngHd_Rltch_Stat_ST3" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="2" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.02" unit="s"/>
+        </Rule>
+    </State>
+    <State id="4">
+        <Action name="Dri_SetEngineHood">
+            <ActionPara type="enum" name="Position" value="Closed" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1.0" unit="s"/>
+        </Event>
+        <Rule type="SignalCmp" name="State4_Rule1">
+            <RulePara type="string" name="SignalName" value="EngHd_Pawl_Stat_ST3" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.02" unit="s"/>
+        </Rule>
+        <Rule type="SignalCmp" name="State4_Rule2">
+            <RulePara type="string" name="SignalName" value="EngHd_Rltch_Stat_ST3" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.02" unit="s"/>
+        </Rule>
+    </State>
+    <State id="5">
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="2" unit="s"/>
+        </Event>
+    </State>
+    <State id="13" final="true"/>
+</Testcase>

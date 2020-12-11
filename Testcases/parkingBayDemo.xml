@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Testcase TestEnv="2.13" descr="apc_park_space_left" version="" timeout="300.0">
+    <ParameterList>
+        <Parameter name="envP_RoadNetwork">
+            <Para type="string" name="RoadNetworkFile" value="layout.xodr" unit=""/>
+            <Para type="string" name="XlmrFile" value="layout.xlmr" unit=""/>
+            <Para type="string" name="Route" value="Route" unit=""/>
+            <Para type="string" name="LandmarkStart" value="Route_start" unit=""/>
+            <Para type="float" name="LandmarkOffset" value="0" unit="m"/>
+            <Para type="enum" name="LaneSelection" value="right2" unit=""/>
+            <Para type="enum" name="LongitudinalAxis" value="rear" unit=""/>
+            <Para type="float" name="LaneOffset" value="0.0" unit="m"/>
+            <Para type="enum" name="SideAxis" value="middle" unit=""/>
+            <Para type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Parameter>
+        <Parameter name="objP_Setup">
+            <Para type="enum" name="ObjectId" value="Obj5" unit=""/>
+            <Para type="float" name="Width" value="0.5" unit="m"/>
+            <Para type="float" name="Length" value="0.5" unit="m"/>
+        </Parameter>
+    </ParameterList>
+    <State id="2">
+        <Action name="Dri_PrepareVehicle"/>
+        <Event name="E_PrepareVehicle"/>
+    </State>
+    <State id="3">
+        <Action name="Dri_SwitchGear">
+            <ActionPara type="enum" name="Position" value="D" unit=""/>
+        </Action>
+        <Event name="E_CompareSignal">
+            <EventPara type="string" name="Signal" value="Dri_SwitchGear" unit=""/>
+            <EventPara type="string" name="ComparedValue" value="D" unit=""/>
+            <EventPara type="enum" name="Operator" value="Equal" unit=""/>
+        </Event>
+    </State>
+    <State id="4">
+        <Action name="Dri_SetSpeedCtrl">
+            <ActionPara type="enum" name="VelocityType" value="Vreal" unit=""/>
+            <ActionPara type="float" name="Velocity" value="15" unit="km/h"/>
+            <ActionPara type="enum" name="Controller" value="csBalanced" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="30.0" unit="s"/>
+        </Event>
+    </State>
+    <State id="99" final="true"/>
+</Testcase>
+<!--        Event: E_time-->

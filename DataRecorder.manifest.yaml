@@ -1,0 +1,10 @@
+---
+DataRecorder:
+  file: DataRecorder.so
+  sha256: 774392286a5d91a30d43beee43345e0ad99c598fbb79d2728bd0ccc23d8f7a8b
+
+shared:
+  DataRecorder:
+    file: DataRecorderGlue.h
+    sha256: 0454f9bbd9af946539546996e00588dc113ef01f23f255ddb06dfa9a7de77b08
+

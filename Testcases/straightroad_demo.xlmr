@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lmr id="straightroad" version="1.0">
+    <header>
+        <author>Lohit</author>
+        <timestamp>1596600883</timestamp>
+        <xodrFile>straightroad.xodr</xodrFile>
+    </header>
+    <routes>
+        <route name="Route" startRoadId="0">
+            <road id="0" />
+        </route>
+    </routes>
+    <landmarks>
+        <landmark name="Route_start" type="none" roadId="0" ds="4.91981468800070409486e+00" t="0.00000000000000000000e+00" />
+        <landmark name="Route_end" type="none" roadId="0" ds="3.27237826455530935732e+01" t="0.00000000000000000000e+00" />
+    </landmarks>
+    <parkingbays />
+</lmr>

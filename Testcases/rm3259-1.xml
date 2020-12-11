@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<Testcase descr="..." timeout="300" version="$Id: Szenario_001.xml 1.1 2014/02/14 11:17:56MEZ Huenlich, Karsten (059-Extern) (KHUENLI) SRS_In_Development  $" testEnv="2.13">
+
+	<ParameterList>
+      <Parameter name="envP_RoadNetwork">
+        <Para name="RoadNetworkFile" type="string" value="rm3259-1.xodr" unit="-"/>
+        <Para name="XlmrFile" type="string" value="rm3259-1.xlmr" unit="-"/>
+        <!--Para name="VScenarioFile" type="string" value="Parkplatz/Parkplatz_Linien.xml" unit="-"/-->
+        <Para name="Route" type="string" value="path_1" unit="-"/>
+        <Para name="LandmarkStart" type="string" value="path_1_start" unit="-"/>
+        <Para name="LandmarkOffset" type="float" value="500.00000" unit="m"/>
+        <Para name="LaneSelection" type="enum" value="right1" unit="-"/>
+        <Para name="LaneOffset" type="float" value="0.00000" unit="m"/>
+      </Parameter>
+	</ParameterList>
+	
+	<State id="0">
+		<Event name="E_PrepareVehicle"/>	
+		<Action name="Dri_PrepareVehicle"/>	
+	</State>
+
+	<State id="1">
+		<Action name="Dri_SetHadDtrSpeed">
+			<ActionPara name="Activity" type="enum" value="Resume" unit=""/>
+			<ActionPara name="Mode" type="enum" value="Tip" unit=""/>
+		</Action>
+		<Action name="Dri_SetSpeedCtrl">
+			<ActionPara name="VelocityType" type="enum" value="vreal" unit=""/>
+			<ActionPara name="Velocity" type="float" value="80.0" unit="km/h"/>
+		</Action>
+				
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="6.0" unit="s"/>
+		</Event>
+	</State>
+
+	<State id="2">
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="3" unit="s"/>
+		</Event>
+		<!-- <Action name="Dri_SetAccelPedal">
+			<ActionPara name="value" type="float" value="0" unit="%"/>
+		</Action> -->
+		<Action name="Dri_SetHadDtrSpeed">
+			<ActionPara name="Activity" type="enum" value="Set++" unit=""/>
+			<ActionPara name="Mode" type="enum" value="Hold" unit=""/>
+		</Action>
+	</State>
+
+	<State id="3">
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="10" unit="s"/>
+		</Event>
+		<Action name="Dri_SetHadDtrSpeed">
+			<ActionPara name="Activity" type="enum" value="Set++" unit=""/>
+			<ActionPara name="Mode" type="enum" value="Release" unit=""/>
+		</Action>
+		<Action name="Env_TrafficLightState">
+			<ActionPara name="Id" type="ui32" value="5001600" unit=""/>
+			<ActionPara name="red" type="enum" value="on" unit=""/>
+			<ActionPara name="yellow" type="enum" value="off" unit=""/>
+			<ActionPara name="green" type="enum" value="off" unit=""/>
+		</Action>
+	</State>
+
+	 <State id="4">
+		<Event name="E_Waypoint">
+			<EventPara name="Subject" type="enum" value="sys" unit=""/>
+			<EventPara name="s" type="float" value="850" unit="m"/>
+		</Event>
+	</State>	
+
+	 <State id="5">
+		<Event name="E_Waypoint">
+			<EventPara name="Subject" type="enum" value="sys" unit=""/>
+			<EventPara name="s" type="float" value="890" unit="m"/>
+		</Event>
+		<Action name="Env_TrafficLightState">
+			<ActionPara name="Id" type="ui32" value="5001600" unit=""/>
+			<ActionPara name="red" type="enum" value="off" unit=""/>
+			<ActionPara name="yellow" type="enum" value="on" unit=""/>
+		</Action>
+	</State>	
+
+	 <State id="6">
+		<Event name="E_Waypoint">
+			<EventPara name="Subject" type="enum" value="sys" unit=""/>
+			<EventPara name="s" type="float" value="903" unit="m"/>
+		</Event>
+		<Action name="Env_TrafficLightState">
+			<ActionPara name="Id" type="ui32" value="5001600" unit=""/>
+			<ActionPara name="yellow" type="enum" value="off" unit=""/>
+			<ActionPara name="green" type="enum" value="on" unit=""/>
+		</Action>
+		<Rule name="s7_red" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="TSA_Dtct_TL_X_Color_ST3_1" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="0" unit=""/>
+		</Rule>
+	</State>	
+
+	<State id="1002" final="true"/>
+</Testcase>

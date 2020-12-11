@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Testcase TestEnv="2.13" descr="CAQ-TS-13650" version="3.0">
+    <ParameterList>
+        <Parameter name="envP_RoadNetwork">
+            <Para type="string" name="RoadNetworkFile" value="rm8319.xodr" unit=""/>
+            <Para type="string" name="XlmrFile" value="rm8319.xlmr" unit=""/>
+            <Para type="string" name="Route" value="sys_path" unit=""/>
+            <Para type="enum" name="LongitudinalAxis" value="front" unit=""/>
+            <Para type="enum" name="SideAxis" value="middle" unit=""/>
+            <Para type="string" name="LandmarkStart" value="sys_path_start" unit=""/>
+            <Para type="float" name="LandmarkOffset" value="5" unit="m"/>
+            <Para type="enum" name="LaneSelection" value="right1" unit=""/>
+            <Para type="enum" name="LaneAlignment" value="middle" unit=""/>
+            <Para type="float" name="LaneOffset" value="0" unit="m"/>
+        </Parameter>
+        <Parameter name="objP_Setup">
+            <Para type="enum" name="ObjectId" value="Obj1" unit=""/>
+            <Para type="enum" name="CollisionDetection" value="on" unit=""/>
+            <Para type="enum" name="Class" value="VEHICLE_CAR" unit=""/>
+        </Parameter>
+    </ParameterList>
+
+    <State id="1">
+        <Action name="Dri_PrepareVehicle"/>
+        <Event name="E_PrepareVehicle"/>
+    </State>
+
+     <State id="2">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="ReverseGearActivation" value="Off" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="3">
+        <Rule name="ReverseGearActivation_Off" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_CamOnRMd_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="0" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+
+     <State id="4">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="ReverseGearActivation" value="RV" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="5">
+        <Rule name="ReverseGearActivation_RV" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_CamOnRMd_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="6">
+    <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+
+     <State id="6">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="ReverseGearActivation" value="SVS_3D" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="7">
+        <Rule name="ReverseGearActivation_SVS_3D" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_CamOnRMd_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="2" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State> 
+
+    <State id="10" final="true"/>
+</Testcase>

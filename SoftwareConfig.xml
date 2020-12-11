@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    This file contains the configuration of DriveSim. 
+
+    Libraries (SutComm, SysVeh and the SDI models) have to be given without their file extensions (.so/.dll).  
+    They will be attached by DriveSim based on the current operating system.
+
+    The SutComm and SysVehicle paths are mandatory.
+ -->
+
+
+<SoftwareConfig version="1.1">
+
+        <!-- Path of the SutCommunication library (without the file extension) -->
+        <SutComm>SutCommOffline</SutComm>
+
+        <!-- Path of the SysVehicle library (without the file extension) -->
+        <SysVehicle>SysVehicle_TorqueSteering</SysVehicle>
+        
+        <!-- Automatically accept the Disclaimer -->
+        <AcceptDisclaimer/>
+        
+        <!-- Prints the EBTB testcase and parameters to the console output -->
+        <!-- <TestInfo/> -->
+        
+        <!-- Path of the EBTB parameter file -->
+        <ParameterFile>BRV223-ParameterFile.xml</ParameterFile>
+        
+        <!-- Path of the hardware configuration file. Not necessary in the offline/SiL mode -->
+        <!-- <HardwareConfigFile>./HardwareConfig.xml</HardwareConfigFile> -->
+        
+        <!-- Tells DriveSim/SutCommunication to create a measurement using the Provetech:VA -->
+        <!-- <PvaDataLogging/> -->
+        
+        <!-- Path of the VTD configuration file -->
+        <!-- <VtdConfigFile>./vtd.xml</VtdConfigFile> -->
+
+        <!-- Paths of the SDI models (without the file extension) which should be loaded by DriveSim.
+             DriveSim will only load the given models with a valid (not empty) path. Based on the given 
+             SutComm/SuT a set of models is mandatory. -->
+        <SmpcSensor>./Smpc5Sensor</SmpcSensor>
+        <MmrfSensor>./MmrfSensor</MmrfSensor>
+        <MmrrSensor>./MmrrSensor</MmrrSensor>
+        <FddSensor>./Fdd</FddSensor>
+        <LrlSensor>./LidarSdg</LrlSensor>
+        <LrrSensor>./Ars441Sensor</LrrSensor>
+        <RmpcSensor>./Rmpc5Sensor</RmpcSensor>
+        <!-- <DftSensor>./Dft_Interface</DftSensor> -->
+        <!-- <UssSensor>./UssSensor</UssSensor> -->
+        <!-- <SdiSerializer>./SerializeToFilePlugin</SdiSerializer> -->
+
+        <!-- IP and port to which the SutComNet (SiL) has to connect -->
+        <IdcSimNet port="32900" ip="127.0.0.1"/>
+
+        <!-- IP and port to which the ParkSutCom has to connect (Raspberry Pi Headunit) -->
+        <!-- <PiHeadunitServer port="3800" ip="127.0.0.1"/> -->
+
+        <!-- IP and port to which the ParkSutCom has to connect (Appium Server) -->
+        <!-- <AppiumServer port="3800" ip="127.0.0.1"/> -->
+        
+        <!-- IPs and ports to which the MapCom (MapSim) library has to connect -->
+        <!-- MapSim: TCP connection DriveSim <-> MapSim -->
+        <!-- DriveSim: UDP connection MapSim -> DriveSim -->
+        <!--MapCom>
+            <MapSim ip="127.0.0.1" srcPort="58000" dstPort="58001"/>
+            <DriveSim ip="127.0.0.1" port="40000"/>
+            <Version>13</Version>
+            <Startup script="MapSim_Startup.bat" WaitForFirstMapSimMessage="TRUE" WaitTimeout="30" delay="5" />
+            <Shutdown script="MapSim_Shutdown.bat" />
+            <DebugLog/>
+        </MapCom-->
+        
+        <!-- <RobComNet ip="127.0.0.1" port="8052"/> -->
+
+        <!-- Tells DriveSim/SutCommunication to enable XCP Mode for Park5 MiniHils -->
+        <!-- <XcpMode/> -->
+ 
+</SoftwareConfig>
+

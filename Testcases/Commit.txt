@@ -1,0 +1,14 @@
+
+1: cmp
+
+2: diffb
+
+3: diff
+
+4: comm
+
+5: rsync
+
+6: diff3
+
+7: vim3

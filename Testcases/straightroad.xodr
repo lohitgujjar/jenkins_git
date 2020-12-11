@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<OpenDRIVE>
+    <header revMajor="1" revMinor="1" name="Testfile" version="1" date="Thu Feb 8 14:24:06 2007" north="2.0000000000000000e+003" south="-2.0000000000000000e+003" east="2.0000000000000000e+003" west="-2.0000000000000000e+003" />
+    <road name="" length="6.1000000000000000e+001" id="" junction="-1">
+        <link />
+        <type s="0.0000000000000000e+000" type="driving" />
+        <planView>
+            <geometry s="0.0000000000000000e+000" x="0.0000000000000000e+000" y="0.0000000000000000e+000" hdg="1.5700000000000001e+000" length="5.0000000000000000e+001">
+                <line />
+            </geometry>
+            <geometry s="5.0000000000000000e+001" x="3.9816335536663167e-002" y="4.9999984146591729e+001" hdg="1.5700000000000001e+000" length="3.0000000000000000e+000">
+                <spiral curvStart="0.0000000000000000e+000" curvEnd="-1.6000000000000000e-001" />
+            </geometry>
+            <geometry s="5.3000000000000000e+001" x="2.8120589530241302e-001" y="5.2982558886114290e+001" hdg="1.3300000000000001e+000" length="8.0000000000000000e+000">
+                <arc curvature="-1.6000000000000000e-001" />
+            </geometry>
+            <geometry s="6.1000000000000000e+001" x="6.0385134493672021e+000" y="5.7734272679622066e+001" hdg="5.0000000000000044e-002" length="0.0000000000000000e+000">
+                <spiral curvStart="-1.6000000000000000e-001" curvEnd="0.0000000000000000e+000" />
+            </geometry>
+        </planView>
+        <elevationProfile />
+        <lateralProfile />
+        <lanes>
+            <laneSection s="0.0000000000000000e+000">
+                <left>
+                    <lane id="1" type="driving" level="false">
+                        <link />
+                        <width sOffset="0.0000000000000000e+000" a="3.0000000000000000e+000" b="0.0000000000000000e+000" c="0.0000000000000000e+000" d="0.0000000000000000e+000" />
+                    </lane>
+                </left>
+                <center>
+                    <lane id="0" type="driving" level="false">
+                        <link />
+                        <width sOffset="0.0000000000000000e+000" a="0.0000000000000000e+000" b="0.0000000000000000e+000" c="0.0000000000000000e+000" d="0.0000000000000000e+000" />
+                    </lane>
+                </center>
+                <right>
+                    <lane id="-1" type="driving" level="false">
+                        <link />
+                        <width sOffset="0.0000000000000000e+000" a="3.0000000000000000e+000" b="0.0000000000000000e+000" c="0.0000000000000000e+000" d="0.0000000000000000e+000" />
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+        <objects />
+        <signals />
+    </road>
+    <junction name="" id="">
+        <connection id="" incomingRoad="" connectingRoad="" contactPoint="start" />
+    </junction>
+</OpenDRIVE>

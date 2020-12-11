@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head >
+        <meta charset="UTF-8"/>
+        <meta name="viewport " content="width=device-width, initial-scale=1.0" />
+        <link href="styles.css" type="text/css" rel="stylesheet">     
+           <title>Example</title>
+        <title>Tescase Report</title>
+        <script src ="/static/Result_Testcases.txt"></script>  
+        <script src ="/static/Testfälle_analuse.txt"></script>  
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+          {% for key, value in data.items() %}
+            {% if value is string %}
+              ['{{ key }}', '{{ value }}'],
+            {% else %}
+              ['{{ key }}', {{ value }}],
+            {% endif %}
+          {% endfor %}
+            ]);
+    
+            var options = {
+              title: 'Testfälle Analyse',
+              is3D: true,
+              slices: {  
+            	1: {offset: 0.5}
+             }
+            };
+    
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+          }
+        </script>
+        
+        <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data1 = google.visualization.arrayToDataTable([
+          {% for key, value in data1.items() %}
+            {% if value is string %}
+              ['{{ key }}', '{{ value }}'],
+            {% else %}
+              ['{{ key }}', {{ value }}],
+            {% endif %}
+          {% endfor %}
+            ]);
+    
+            var options1 = {
+              title: 'Xodr Files Analyse',
+              is3D: true,
+              slices: {  
+            	1: {offset: 0.5}
+             }
+
+
+            };
+    
+            var chart1 = new google.visualization.PieChart(document.getElementById('piechart_2d'));
+            chart1.draw(data1, options1);
+          }
+        </script>
+
+      </head>
+     
+  
+ 
+
+      </script>
+    <body>
+       
+       <div class="header">
+        <img src="logo-zentral.png" alt="IAS-Logo">  
+       <h5>
+           Gen4es.track Report
+       </h5>       
+
+       </div>
+       <div class="header1">
+         <h2>
+
+         Meta information
+         </h2>
+        </div>
+    <body>
+      <table border="0.6" border bgcolor=#848484  class="table">
+
+       
+        <tr class="table_cel" border bgcolor=#F2F2F2 border=#848484 >
+            <td>Ausführungsdatum</td>
+
+            <td>{{datum}}</td>
+
+        </tr>
+        <tr class="table_cel" border bgcolor=#F2F2F2 border=#848484 >
+            <td>
+              Gen4es.track Version	
+            </td>
+            <td>
+                V 1.1.0	
+            </td>
+        </tr>
+        
+
+      </table>
+
+
+
+    </body>
+    
+    <div class="header1">
+       <h2>
+           Teställe 
+       </h2>
+       
+
+    </div>
+    <body>
+        <table border="0.6" border bgcolor=#848484 class="table">
+          <tr class="table_header">
+            {% for header1 in headings1%}
+            <th  class="table_cel" border bgcolor=#D2D2D2 border=#848484> {{header1}}</th>
+            {% endfor %}
+   
+   
+           </tr>
+         
+            {% for row in list_of_lists2 %}
+            <tr  class="table_header">
+    
+              {% for cell in row %}
+              <td class="table_cel" border bgcolor=#F2F2F2 border=#848484>   {{ cell }} </td>
+        
+              {% endfor %}
+            </tr>
+    
+            {% endfor %}
+  
+        </table>
+       
+  
+      </body>
+      <div class="header1">
+        <h2>
+            Xodr Strecken 
+        </h2>
+        
+ 
+     </div>
+     <body>
+      <table border="0.6" border bgcolor=#848484 class="table">
+        <tr class="table_header">
+          {% for header2 in headings2%}
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>{{header2}}</th>
+          {% endfor %}
+ 
+ 
+         </tr>
+       
+          {% for row in list_of_listes3 %}
+          <tr  class="table_header">
+  
+            {% for cell in row %}
+            <td class="table_cel" border bgcolor=#F2F2F2 border=#848484 >  {{ cell }} </td>
+      
+            {% endfor %}
+          </tr>
+  
+          {% endfor %}
+
+      </table>
+
+     </body>
+  
+    
+    <div class="header1" >
+       
+      <table class="table" >
+        <tr>
+           <td>
+            <div  align="center" id="piechart_3d" style="width: 600px; height: 500px;"></div>
+
+           </td>
+           <td>
+            <div  align="center" id="piechart_2d" style="width: 600px; height: 500px;"></div>
+
+           </td>
+
+        </tr>
+      </table>
+        
+        
+ 
+     </div>
+     <body>
+       
+     </body>
+       
+       
+  </body >
+    <div  class="header1"> 
+     <h2>
+       Testfälle Analyse : Tabelle
+     </h2>
+     </div>
+       <table border="0.6" border bgcolor=#848484  class="table"  >
+
+        <tr class="table_header">
+         {% for header in headings%}
+         <th class="table_cel"  border bgcolor=#D2D2D2 border=#848484>{{header}}</th>
+         {% endfor %}
+
+
+        </tr>
+        {% for row in list_of_lists %}
+        <tr class="table_header">
+
+          {% for cell in row %}
+          {% if 't_n' in cell %}
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  {{cell}} </td>
+          {% elif 'F' in cell %}
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  {{cell}} </td>
+          {% else %} 
+          <td  class="table_cel" border bgcolor=#00FF00 > {{cell}} </td>
+          {% endif %}
+          {% endfor %}
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        {% endfor %}
+       
+   
+
+
+
+        </table>
+      
+
+  
+    </body>
+    <body>
+      <div  class="header1"> 
+        <h2>
+          Xodr_Files Vergleich : Tabelle
+        </h2>
+      </div>
+       <table border="0.6" border bgcolor=#848484 class="table">
+        <tr class="table_header">
+          {% for header2 in headings3%}
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>{{header2}}</th>
+          {% endfor %}
+ 
+ 
+         </tr>
+       
+          {% for row in list_of_listes4 %}
+          <tr  class="table_header">
+  
+            {% for cell in row %}
+            {% if '1,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '2,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '3,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '4,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '5,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '6,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '7,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '8,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '9,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '10,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif 'Teil' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% else %} 
+             <td  class="table_cel" border bgcolor=#00FF00 > {{cell}} </td>
+             {% endif %}
+      
+            {% endfor %}
+          </tr>
+  
+          {% endfor %}
+
+      </table>
+
+     </body>
+     <body>
+      <div  class="header1"> 
+        <h2>
+         Verschiedenen Xodr_Files Vergleich : Tabelle
+        </h2>
+      </div>
+       <table border="0.6" border bgcolor=#848484 class="table">
+        <tr class="table_header">
+          {% for header2 in headings4%}
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>{{header2}}</th>
+          {% endfor %}
+ 
+ 
+         </tr>
+       
+          {% for row in list_of_listes5 %}
+          <tr  class="table_header">
+  
+            {% for cell in row %}
+            {% if '1,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '2,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '3,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '4,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '5,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '6,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '7,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '8,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '9,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '0,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif '10,' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% elif 'Teil' in cell %}
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  {{cell}} </td>
+             {% else %} 
+             <td  class="table_cel" border bgcolor=#00FF00 > {{cell}} </td>
+             {% endif %}
+      
+            {% endfor %}
+          </tr>
+  
+          {% endfor %}
+
+      </table>
+
+     </body>
+
+
+     
+      
+     
+  
+    <img src="/static/red.png" alt="IAS-Logo">  
+
+</html>

@@ -1,0 +1,10 @@
+---
+EbtbParser:
+  file: EbtbParser.so
+  sha256: 8bc866dc509f5d0297cefeada69da0a539a2e5ba6f00eaf0b7b471fa3758a25f
+
+shared:
+  EbtbParser:
+    file: EbtbParserGlue.h
+    sha256: f317010318937a0d6e23822e94a2123ed529c69fc7881d99db6b6a6190f629f9
+

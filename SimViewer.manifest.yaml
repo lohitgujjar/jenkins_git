@@ -1,0 +1,10 @@
+---
+SimViewer:
+  file: SimViewer.so
+  sha256: e6cc808b05a85b02e62493bd1b432a777a982676147196d90ef501fcb8d945dc
+
+shared:
+  SimViewer:
+    file: SimViewerGlue.h
+    sha256: 91e5d732939efcb50e47142e841cc0a26049ac9a728ec076ed597ad7dfedda4c
+

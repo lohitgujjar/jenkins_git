@@ -1,0 +1,22 @@
+---
+SutCom:
+  file: SutCommOffline.so
+  sha256: 9b596c7bd1b44a15614df9039b6a93bebb91c02c8c470c92e161c3c2426190d4
+tdb: 
+  file: 
+  sha256: 
+ttc: 
+  file: 
+  sha256: 
+
+version: 
+mode: offline
+ncd: 
+vehicleLine: 
+bus: 
+
+shared:
+  SutCom:
+    file: SutCommunicationGlue.h
+    sha256: dcc30127a5bfe27387993ecae772c25db54af279d02de472827e86b573cb2388
+

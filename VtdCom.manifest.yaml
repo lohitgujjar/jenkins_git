@@ -1,0 +1,10 @@
+---
+VtdCom:
+  file: VtdCom.so
+  sha256: be331878c688f0106663344c0964cbf39981ae066c305207b8f46ff4f882623e
+
+shared:
+  VtdCom:
+    file: VtdComGlue.h
+    sha256: 6e8c1b906ee9230dd581e7360755d7c368c563cac7a671d8a7339c36e6675b84
+

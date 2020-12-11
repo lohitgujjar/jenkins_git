@@ -1,0 +1,11 @@
+---
+SysVehicle:
+  file: SysVehicle_TorqueSteering_Prev.so
+  sha256: b619d22173bf400945d8b642f2b7716c323a2a8d0ff3f28e26ad4c36b9930ff9
+  version: 5.21.0-5.20.36.0
+
+shared:
+  SysVehicle:
+    file: SysVehicleDynGlue.h
+    sha256: fca980ffb72e12573da3788522982e7a5c8e9a8799d9d76739d8bdd0e82b3459
+

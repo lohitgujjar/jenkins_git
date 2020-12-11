@@ -1,0 +1,218 @@
+[000.0000] [W] No video record path specified, default is used: '.\'.
+
+                    ----------------------------------
+                    *      RDU-HiL-Testumgebung      *
+                    *                                *
+                    *            DriveSim            *
+                    ----------------------------------
+
+ =========================================================================
+ (C) by Daimler AG, Mercedes Benz Cars Development
+ Department: RD/ASE (Team Provoznik)
+ =========================================================================
+
+
+ =========================================================================
+ == CONFIGURATION AND SETTINGS ==
+ =========================================================================
+
+[000.0001] [I] Initializing the timing measurements.
+[000.0001] [I] Software-Config-File: 'SoftwareConfig.xml'
+[000.0001] [I] Testcase-XML-File: '/home/basal491/DriveSimRepo/miniHil/gen5/DriveSim_Build_5.20.36.0/Testcases/files/trkP_ParkingBay.xml'
+[000.0001] [I] Parameter-XML-File: -
+
+[000.0203] [I] System Info: model name : Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz , # of CPUs: 4, MemTotal: 16326676 kB 
+[000.0203] [I] Loading the DLL: 'EbtbParser.so'
+
+[000.0213] [I] Loading the XML Software Configuration.
+[000.0224] [I] XML software config file - SutComm: SutCommOffline
+[000.0225] [I] XML software config file - SysVehicle: SysVehicle_TorqueSteering
+[000.0225] [I] XML software config file - ParameterFile: BRV223-ParameterFile.xml
+[000.0225] [I] XML software config file - SmpcSensor: ./Smpc5Sensor
+[000.0225] [I] XML software config file - MmrfSensor: ./MmrfSensor
+[000.0225] [I] XML software config file - MmrrSensor: ./MmrrSensor
+[000.0225] [I] XML software config file - FddSensor: ./Fdd
+[000.0225] [I] XML software config file - LrlSensor: ./LidarSdg
+[000.0225] [I] XML software config file - LrrSensor: ./Ars441Sensor
+[000.0225] [I] XML software config file - RmpcSensor: ./Rmpc5Sensor
+[000.0225] [I] SimNet-Address set to '127.0.0.1'
+[000.0225] [I] SimNet-Port set to '32900'
+[000.0225] [I] XML software config file - IdcSimNet: 127.0.0.1:32900
+ =========================================================================
+ ******** Conditions for the use of the VPU HiL test environment ********
+
+ This test environment is provided without any guarantee of suitability for
+ a specific test purpose. The evaluation of the test results must
+ always include the verification of whether this test environment
+ is suitable for the execution of the selected test case.
+ =========================================================================
+
+ Accept disclaimer? [JA|NEIN]: JA
+
+ =========================================================================
+ DriveSim Manifest check.
+
+ DriveSim Version: 5.20.36.0
+ EBTBLangVersion: develop
+
+ Compile-Date: Sep 11 2020
+ Compile-Time: 14:15:31
+ DriveSim binary checksum:   7ec5ecea42570be2963271ee6c52bcba0b4ce8d10cfcc4968dbbf02be709f64a
+ DriveSim manifest checksum: 7ec5ecea42570be2963271ee6c52bcba0b4ce8d10cfcc4968dbbf02be709f64a
+
+ =========================================================================
+
+ Libraries Manifest check.
+
+ Library YAML: EbtbParser.manifest.yaml
+ EbtbParser.so binary checksum:   8bc866dc509f5d0297cefeada69da0a539a2e5ba6f00eaf0b7b471fa3758a25f
+ EbtbParser.so manifest checksum: 8bc866dc509f5d0297cefeada69da0a539a2e5ba6f00eaf0b7b471fa3758a25f
+ EbtbParser.so manifest GLUE checksum: f317010318937a0d6e23822e94a2123ed529c69fc7881d99db6b6a6190f629f9
+ EbtbParser.so DriveSim GLUE checksum: f317010318937a0d6e23822e94a2123ed529c69fc7881d99db6b6a6190f629f9
+
+
+ Library YAML: StudentFacade.manifest.yaml
+ StudentFacade.so binary checksum:   8c575f85e5deecefbeaf3d81ad94f41ca1ceec3790bf36e91300243d84917be0
+ StudentFacade.so manifest checksum: 8c575f85e5deecefbeaf3d81ad94f41ca1ceec3790bf36e91300243d84917be0
+ StudentFacade.so manifest GLUE checksum: 91e5d732939efcb50e47142e841cc0a26049ac9a728ec076ed597ad7dfedda4c
+ StudentFacade.so DriveSim GLUE checksum: 91e5d732939efcb50e47142e841cc0a26049ac9a728ec076ed597ad7dfedda4c
+
+
+ Library YAML: OpenDriveCom.manifest.yaml
+ OpenDriveCom.so binary checksum:   59ca5a54f259c666d1abb6eedf21df60993856adc9254102af3ec1dd93b53c4a
+ OpenDriveCom.so manifest checksum: 59ca5a54f259c666d1abb6eedf21df60993856adc9254102af3ec1dd93b53c4a
+ OpenDriveCom.so manifest GLUE checksum: 2249a0a48cc4491b64993d5e4ca3070a41f2f54fa8ee91738f1ca6390bd8189c
+ OpenDriveCom.so DriveSim GLUE checksum: 2249a0a48cc4491b64993d5e4ca3070a41f2f54fa8ee91738f1ca6390bd8189c
+
+
+ Library YAML: SysVehicle_TorqueSteering.manifest.yaml
+ SysVehicle_TorqueSteering.so binary checksum:   f1aa6faa326597090597f70c0b41cb5080a55d1f38728c9393e1d699d2f665fb
+ SysVehicle_TorqueSteering.so manifest checksum: f1aa6faa326597090597f70c0b41cb5080a55d1f38728c9393e1d699d2f665fb
+ SysVehicle_TorqueSteering.so manifest GLUE checksum: fca980ffb72e12573da3788522982e7a5c8e9a8799d9d76739d8bdd0e82b3459
+ SysVehicle_TorqueSteering.so DriveSim GLUE checksum: fca980ffb72e12573da3788522982e7a5c8e9a8799d9d76739d8bdd0e82b3459
+
+
+ Library YAML: SutCommOffline.manifest.yaml
+ SutCommOffline.so binary checksum:   9b596c7bd1b44a15614df9039b6a93bebb91c02c8c470c92e161c3c2426190d4
+ SutCommOffline.so manifest checksum: 9b596c7bd1b44a15614df9039b6a93bebb91c02c8c470c92e161c3c2426190d4
+ SutCommOffline.so manifest GLUE checksum: dcc30127a5bfe27387993ecae772c25db54af279d02de472827e86b573cb2388
+ SutCommOffline.so DriveSim GLUE checksum: dcc30127a5bfe27387993ecae772c25db54af279d02de472827e86b573cb2388
+
+
+ Library YAML: SdiCom.manifest.yaml
+ SdiCom.so binary checksum:   6259a584de008d2157f4af297e219e717328f645a5e77c7bd62def1e374015e5
+ SdiCom.so manifest checksum: 6259a584de008d2157f4af297e219e717328f645a5e77c7bd62def1e374015e5
+ SdiCom.so manifest GLUE checksum: 90fc1a2e7b4500e78c86b29d6decd43f2f0489cf94f5c1fdd2ef61c7c8671303
+ SdiCom.so DriveSim GLUE checksum: 90fc1a2e7b4500e78c86b29d6decd43f2f0489cf94f5c1fdd2ef61c7c8671303
+
+
+ Library YAML: VtdCom.manifest.yaml
+ VtdCom.so binary checksum:   be331878c688f0106663344c0964cbf39981ae066c305207b8f46ff4f882623e
+ VtdCom.so manifest checksum: be331878c688f0106663344c0964cbf39981ae066c305207b8f46ff4f882623e
+ VtdCom.so manifest GLUE checksum: 6e8c1b906ee9230dd581e7360755d7c368c563cac7a671d8a7339c36e6675b84
+ VtdCom.so DriveSim GLUE checksum: 6e8c1b906ee9230dd581e7360755d7c368c563cac7a671d8a7339c36e6675b84
+
+
+ Library YAML: DataRecorder.manifest.yaml
+ DataRecorder.so binary checksum:   774392286a5d91a30d43beee43345e0ad99c598fbb79d2728bd0ccc23d8f7a8b
+ DataRecorder.so manifest checksum: 774392286a5d91a30d43beee43345e0ad99c598fbb79d2728bd0ccc23d8f7a8b
+ DataRecorder.so manifest GLUE checksum: 0454f9bbd9af946539546996e00588dc113ef01f23f255ddb06dfa9a7de77b08
+ DataRecorder.so DriveSim GLUE checksum: 0454f9bbd9af946539546996e00588dc113ef01f23f255ddb06dfa9a7de77b08
+
+
+ Library YAML: RobCom.manifest.yaml
+ RobCom.so binary checksum:   137928df90e977f7253d4253808d80c33191a6dc8f7e36bfc5019c9a607761da
+ RobCom.so manifest checksum: 137928df90e977f7253d4253808d80c33191a6dc8f7e36bfc5019c9a607761da
+ RobCom.so manifest GLUE checksum: 2f4413b71a59216adb6661d1cb8c3175679c73bc975738b7a1b3e08ca396689e
+ RobCom.so DriveSim GLUE checksum: 2f4413b71a59216adb6661d1cb8c3175679c73bc975738b7a1b3e08ca396689e
+
+
+ Library YAML: SignalLogger.manifest.yaml
+ SignalLogger.so binary checksum:   61579a5f58b765573a9de7366bf0e3ab1fd12ebdb8531e0a112d131098de539e
+ SignalLogger.so manifest checksum: 61579a5f58b765573a9de7366bf0e3ab1fd12ebdb8531e0a112d131098de539e
+ SignalLogger.so manifest GLUE checksum: 66eb6cb05137e2055145fd727b6cc943f2bff965a55a3176b521599c135e0295
+ SignalLogger.so DriveSim GLUE checksum: 66eb6cb05137e2055145fd727b6cc943f2bff965a55a3176b521599c135e0295
+
+
+ Library YAML: Pos.manifest.yaml
+ Pos.so binary checksum:   dc4b90b5fef7d9a010ea0c91c10adb1f76d3b71de655ebd680b18a06b8c45a38
+ Pos.so manifest checksum: dc4b90b5fef7d9a010ea0c91c10adb1f76d3b71de655ebd680b18a06b8c45a38
+ Pos.so manifest GLUE checksum: d3288f563ff7110ebba30b40e26688fe104eecdf42f1d1e82fd58cdba12d5df1
+ Pos.so DriveSim GLUE checksum: d3288f563ff7110ebba30b40e26688fe104eecdf42f1d1e82fd58cdba12d5df1
+
+
+ External Manifest check.
+ libSensorDataInterface.so binary checksum:   6a3133759b50e8c7d03f825e44ebba76fe9ddfb46c760ed24fc985c2a3ad2d1d
+ libSensorDataInterface.so manifest checksum: 6a3133759b50e8c7d03f825e44ebba76fe9ddfb46c760ed24fc985c2a3ad2d1d
+
+ =========================================================================
+
+
+[000.1924] [I] Loading the DLL: 'SutCommOffline.so'
+[000.1927] [I]     Type: OFFLINE
+[000.1927] [I]     NCD:  n/a
+
+[000.1927] [I] Loading the DLL: 'StudentFacade.so'
+
+[000.1928] [I] Loading the DLL: 'SysVehicle_TorqueSteering.so'
+[000.1928] [I]     Version: '5.22.0-RC1'
+
+[000.1928] [I] Loading the optional DLL: 'DataRecorder.so'
+
+[000.1948] [I] Loading the DLL: 'SignalLogger.so'
+
+[000.1949] [I] Loading the DLL: 'OpenDriveCom.so'
+
+[000.1961] [I] Loading the optional DLL: 'VtdCom.so'
+
+[000.1962] [I] RobotCom 'RobCom.so' is not available.
+
+[000.1962] [I] Loading the DLL: 'SdiCom.so'
+
+[000.1968] [I] Loading the DLL: 'Pos.so'
+
+
+ =========================================================================
+ == STARTUP ==
+ =========================================================================
+
+[000.2010] [I] Current EBTB-Version: 2.13.
+[000.2010] [I] Minimum compatible EBTB version: 2.10.
+
+[000.2010] [I] Loading the EBTB-Parameter.
+
+[000.2017] [I] Loading the EBTB-Testcase.
+[000.2024] [I] Testcase file '/home/basal491/DriveSimRepo/miniHil/gen5/DriveSim_Build_5.20.36.0/Testcases/files/trkP_ParkingBay.xml': Test has 2 states
+[000.2024] [E] Test case file '/home/basal491/DriveSimRepo/miniHil/gen5/DriveSim_Build_5.20.36.0/Testcases/files/trkP_ParkingBay.xml': Unknown parameter name in line 7: 'trkP_Track'
+[000.2025] [I] Exit the SimViewer.
+[000.2025] [I] Terminating SuT Communication.
+[000.2025] [I] Distance covered by the system vehicle: 0m in 0s
+
+[000.2025] [I] Free memory (SAT).
+
+ =========================================================================
+ == SHUTDOWN ==
+ =========================================================================
+[000.2025] [I] Exit the SimViewer.
+[000.2025] [I] Terminating SuT Communication.
+[000.2025] [I] Distance covered by the system vehicle: 0m in 0s
+
+[000.2025] [I] Free memory (SAT).
+[000.2025] [T] Runtime in [s]:
+[000.2025] [T] REALTIME 0.000000
+[000.2025] [T] TESTCASETIME 0.000000
+[000.2026] [I] MapCom Quit
+[000.2026] [I] Terminating SDI Communication.
+[000.2027] [I] Unloading the SimViewer DLL.
+[000.2027] [I] Unloading the SuT communications-DLL.
+[000.2027] [I] Unloading the system vehicle-DLL.
+[000.2027] [I] Unloading the EBTB-Parser-DLL.
+[000.2028] [I] Unloading the Recorder-DLL.
+[000.2028] [I] Unloading the OpenDrive-DLL.
+[000.2029] [I] Unloading the VtdCom-DLL.
+[000.2030] [I] Unloading the SdiCom DLL.
+[000.2037] [I] Unloading the Pos-DLL.
+
+ =========================================================================
+ ***************************** End test case *****************************
+ =========================================================================

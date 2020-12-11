@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lmr id="ParkCity" version="1.0">
+    <header>
+        <author>MWEISKO</author>
+        <timestamp>1558691241</timestamp>
+        <xodrFile>../OpenDrive/ParkCity.xodr</xodrFile>
+    </header>
+    <routes>
+        <route name="SysPath" startRoadId="60">
+            <road id="60" />
+        </route>
+    </routes>
+    <landmarks>
+        <landmark name="SysPath_start" type="none" roadId="60" ds="7.80766890916225975161e+000" t="0.00000000000000000000e+000" />
+        <landmark name="SysPath_end" type="none" roadId="60" ds="1.48659847572369676527e+003" t="0.00000000000000000000e+000" />
+    </landmarks>
+	<parkingbays>
+	<!-- "Parallel Parking Bay on the Driver Side "Left" "-->
+		<parkingbay positionname = "ParkingBay1" x = "375" y="32.5"/>
+	<!-- "Parallel Parking Bay on the Driver Side "Left" "-->
+		<parkingbay positionname = "ParkingBay4" x = "380" y="34"/>
+	<!-- "Parallel Parking Bay on the Driver Side "Left1" "-->
+		<parkingbay positionname = "ParkingBay6" x = "375" y="33.5"/>
+	<!-- "Parallel Parking Bay on the Driver Side "Left2" "-->
+		<parkingbay positionname = "ParkingBay7" x = "372" y="33.5"/>
+	<!-- "Parallel Parking Bay on the Driver Side "Left3" "-->
+		<parkingbay positionname = "ParkingBay11" x = "378" y="33.5"/>
+	<!-- "Parallel Parking Bay on the Passenger Side "Right" "-->		
+		<parkingbay positionname = "ParkingBay2" x = "375" y="22.5"/>
+	<!-- "Perpendicular Parking Bay on the Passenger Side "Right" "-->		
+		<parkingbay positionname = "ParkingBay3" x = "385" y="21"/>
+	<!-- "Perpendicular Parking Bay on the Passenger Side "Right1" "-->		
+		<parkingbay positionname = "ParkingBay5" x = "380" y="20.5"/>
+	<!-- "Perpendicular Parking Bay on the Passenger Side "Right2" "-->		
+		<parkingbay positionname = "ParkingBay8" x = "372" y="21"/>
+	<!-- "Perpendicular Parking Bay on the Passenger Side "Right3" "-->		
+		<parkingbay positionname = "ParkingBay9" x = "380" y="21"/>
+	<!-- "Perpendicular Parking Bay on the Passenger Side "Right4" "-->		
+		<parkingbay positionname = "ParkingBay10" x = "382" y="21"/>
+	<!-- "Perpendicular Parking Bay on the Passenger Side Left4"  "-->		
+		<parkingbay positionname = "ParkingBay1" x = "375" y="34"/>
+	<!-- "Parallel Parking Bay on the Passenger Side "Right" "-->		
+		<parkingbay positionname = "ParkingBay2" x = "365" y="22.5"/>
+	<!-- "Perpendicular Parking Bay on the Passenger Side Left5"  "-->	
+		<parkingbay positionname = "ParkingBay10" x = "382" y="21"/>	
+	</parkingbays> 
+</lmr>

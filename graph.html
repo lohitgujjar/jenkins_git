@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head >
+        <meta charset="UTF-8"/>
+        <meta name="viewport " content="width=device-width, initial-scale=1.0" />
+        <link href="styles.css" type="text/css" rel="stylesheet">     
+           <title>Example</title>
+        <title>Tescase Report</title>
+        <script src ="/static/Result_Testcases.txt"></script>  
+        <script src ="/static/Testfälle_analuse.txt"></script>  
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+          
+            
+              ['Task', '.xml'],
+            
+          
+            
+              ['Ohne Strecken', 5],
+            
+          
+            
+              ['Mit Strecken', 25],
+            
+          
+            ]);
+    
+            var options = {
+              title: 'Testfälle Analyse',
+              is3D: false,
+              slices: {  
+            	1: {offset: 0.5}
+             }
+            };
+    
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+          }
+        </script>
+        
+        <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data1 = google.visualization.arrayToDataTable([
+          
+            
+              ['Task', '.xodr'],
+            
+          
+            
+              ['Unverwendete .Xodr Strecken', 5],
+            
+          
+            
+              ['Verwendete Xodr Strecken', 20],
+            
+          
+            ]);
+    
+            var options1 = {
+              title: 'Xodr Files Analyse',
+              is3D: false,
+              slices: {  
+            	1: {offset: 0.5}
+             }
+
+
+            };
+    
+            var chart1 = new google.visualization.PieChart(document.getElementById('piechart_2d'));
+            chart1.draw(data1, options1);
+          }
+        </script>
+
+      </head>
+     
+  
+ 
+
+      </script>
+    <body>
+       
+       <div class="header">
+        <img src="logo-zentral.png" alt="IAS-Logo">  
+       <h5>
+           Gen4es.track Report
+       </h5>       
+
+       </div>
+       <div class="header1">
+         <h2>
+
+         Meta information
+         </h2>
+        </div>
+    <body>
+      <table border="0.6" border bgcolor=#848484  class="table">
+
+       
+        <tr class="table_cel" border bgcolor=#F2F2F2 border=#848484 >
+            <td>Ausführungsdatum</td>
+
+            <td>(2020, 12, '21:11:01')</td>
+
+        </tr>
+        <tr class="table_cel" border bgcolor=#F2F2F2 border=#848484 >
+            <td>
+              Gen4es.track Version	
+            </td>
+            <td>
+                V 1.1.0	
+            </td>
+        </tr>
+        
+
+      </table>
+
+
+
+    </body>
+    
+    <div class="header1">
+       <h2>
+           Teställe 
+       </h2>
+       
+
+    </div>
+    <body>
+        <table border="0.6" border bgcolor=#848484 class="table">
+          <tr class="table_header">
+            
+            <th  class="table_cel" border bgcolor=#D2D2D2 border=#848484> Anzahl .xml Testfälle</th>
+            
+            <th  class="table_cel" border bgcolor=#D2D2D2 border=#848484> Mit Strecken</th>
+            
+            <th  class="table_cel" border bgcolor=#D2D2D2 border=#848484> Ohne Strecken</th>
+            
+   
+   
+           </tr>
+         
+            
+            <tr  class="table_header">
+    
+              
+              <td class="table_cel" border bgcolor=#F2F2F2 border=#848484>   30 </td>
+        
+              
+              <td class="table_cel" border bgcolor=#F2F2F2 border=#848484>   25 </td>
+        
+              
+              <td class="table_cel" border bgcolor=#F2F2F2 border=#848484>   5 </td>
+        
+              
+            </tr>
+    
+            
+  
+        </table>
+       
+  
+      </body>
+      <div class="header1">
+        <h2>
+            Xodr Strecken 
+        </h2>
+        
+ 
+     </div>
+     <body>
+      <table border="0.6" border bgcolor=#848484 class="table">
+        <tr class="table_header">
+          
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>Anzahl Xodr Strecken</th>
+          
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>Verwendete Xdor Strecken</th>
+          
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>Unverwendete Xodr Strecken</th>
+          
+ 
+ 
+         </tr>
+       
+          
+          <tr  class="table_header">
+  
+            
+            <td class="table_cel" border bgcolor=#F2F2F2 border=#848484 >  25 </td>
+      
+            
+            <td class="table_cel" border bgcolor=#F2F2F2 border=#848484 >  20 </td>
+      
+            
+            <td class="table_cel" border bgcolor=#F2F2F2 border=#848484 >  5 </td>
+      
+            
+          </tr>
+  
+          
+
+      </table>
+
+     </body>
+  
+    
+    <div class="header1" >
+       
+      <table class="table" >
+        <tr>
+           <td>
+            <div  align="center" id="piechart_3d" style="width: 600px; height: 500px;"></div>
+
+           </td>
+           <td>
+            <div  align="center" id="piechart_2d" style="width: 600px; height: 500px;"></div>
+
+           </td>
+
+        </tr>
+      </table>
+        
+        
+ 
+     </div>
+     <body>
+       
+     </body>
+       
+       
+  </body >
+    <div  class="header1"> 
+     <h2>
+       Testfälle Analyse : Tabelle
+     </h2>
+     </div>
+       <table border="0.6" border bgcolor=#848484  class="table"  >
+
+        <tr class="table_header">
+         
+         <th class="table_cel"  border bgcolor=#D2D2D2 border=#848484>Testfall</th>
+         
+         <th class="table_cel"  border bgcolor=#D2D2D2 border=#848484>Strecke</th>
+         
+         <th class="table_cel"  border bgcolor=#D2D2D2 border=#848484>DriveSime</th>
+         
+         <th class="table_cel"  border bgcolor=#D2D2D2 border=#848484>Fall</th>
+         
+
+
+        </tr>
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm9072.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm9072.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8948.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8948.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8725-1.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8725.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319-2.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8970.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8970.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > parkingBayDemo.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > layout.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Obj_ChangeLaneParkingBay.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > DriverTrack.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > trkP_ParkingBay.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > SmartDB.2011.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Opendrive_testcase.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > straightroad.xodr  </td>
+          
+          
+          
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  läuft_nicht  </td>
+          
+          
+          
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  Failed </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > ALC3.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > ALC_doppelkurve.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Pfadliste.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 >    </td>
+          
+          
+          
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  läuft_nicht </td>
+          
+          
+          
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  Failed </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319-6.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm3259-3.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm3259-3.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > parkingBayDemo.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > layout.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm3259-1.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm3259-1.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8725-3.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8725-3.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8239.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8239.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Obj_ChangeLaneParkingBay.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > DriverTrack.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319-4.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > trkP_ParkingBay.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > SmartDB.2011.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm7794.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm7794.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm3503-3.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm3503-3.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8725-2.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8725.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319-7.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Opendrive_testcase.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > straightroad.xodr  </td>
+          
+          
+          
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  läuft_nicht  </td>
+          
+          
+          
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  Failed </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319-3.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > ALC3.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > ALC_doppelkurve.xodr  </td>
+          
+          
+          
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  läuft_nicht  </td>
+          
+          
+          
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  Failed </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319-1.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319-5.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > rm8319.xodr   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > läuft  </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Success </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+        <tr class="table_header">
+
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 > Pfadliste.xml   </td>
+          
+          
+           
+          <td  class="table_cel" border bgcolor=#00FF00 >    </td>
+          
+          
+          
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  läuft_nicht </td>
+          
+          
+          
+          <td class="table_cel" border bgcolor=#FF4040 border=#FF4040>  Failed </td>
+          
+          
+          <th  class="table_cel" border bgcolor=#F2F2F2 border=#848484 >    </th>
+        </tr>
+
+        
+       
+   
+
+
+
+        </table>
+      
+
+  
+    </body>
+    <body>
+      <div  class="header1"> 
+        <h2>
+          Xodr_Files Vergleich : Tabelle
+        </h2>
+      </div>
+       <table border="0.6" border bgcolor=#848484 class="table">
+        <tr class="table_header">
+          
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>Erste Xodr File</th>
+          
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>Identische Xodr Files</th>
+          
+ 
+ 
+         </tr>
+       
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > rm8239.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 >  rm8970.xodr rm8725-3.xodr </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > rm8319.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 >  rm8725.xodr rm9072.xodr rm8948.xodr </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 >  ALC_DriverTrack.xodr ALC_DriverTrack.xodr </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > ALC_doppelkurve.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 >  ALC_doppelkurve_test.xodr ALC_doppelkurve_test_dummy.xodr </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > rm7794.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 >  rm3503-3.xodr </td>
+             
+      
+            
+          </tr>
+  
+          
+
+      </table>
+
+     </body>
+     <body>
+      <div  class="header1"> 
+        <h2>
+         Verschiedenen Xodr_Files Vergleich : Tabelle
+        </h2>
+      </div>
+       <table border="0.6" border bgcolor=#848484 class="table">
+        <tr class="table_header">
+          
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>Erste Xodr File</th>
+          
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>Zweite Xodr Files</th>
+          
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>Z. Verschiedenen Zeile</th>
+          
+ 
+ 
+         </tr>
+       
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:layout_2.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:layout.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  4:von:1901,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:layout_2.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:layout.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  4:von:1901,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm7794.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3503-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_doppelkurve.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm7794.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  8:von:465,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_doppelkurve.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3503-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  8:von:465,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_doppelkurve.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  8:von:465,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm7794.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3503-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:layout.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:layout_2.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  4:von:1900,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_doppelkurve_test.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm7794.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  8:von:465,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_doppelkurve_test.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3503-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  8:von:465,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_doppelkurve_test.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  8:von:465,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm7794.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  4:von:82,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm7794.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3503-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm7794.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3503-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_DriverTrack.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  9:von:221,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_doppelkurve_test_dummy.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm7794.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  8:von:465,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_doppelkurve_test_dummy.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3503-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  8:von:465,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:ALC_doppelkurve_test_dummy.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  8:von:465,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:layout.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:layout_2.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  4:von:1900,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3503-3.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  4:von:82,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm7794.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  4:von:82,, </td>
+             
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3259-3.xodr </td>
+             
+      
+            
+             
+             <td  class="table_cel" border bgcolor=#00FF00 > V:1.0:rm3503-3.xodr </td>
+             
+      
+            
+            
+             <td class="table_cel" border bgcolor=#ffa500 border=#ffa500>  4:von:82,, </td>
+             
+      
+            
+          </tr>
+  
+          
+
+      </table>
+
+      <body>
+        <table border="0.6" border bgcolor=#848484 class="table">
+        <tr class="table_header">
+          
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>Unverwendete Xodr</th>
+          
+          <th class="table_cel" border bgcolor=#D2D2D2 border=#848484>Unverwendete Xlmr File</th>
+          
+ 
+ 
+         </tr>
+       
+          
+          <tr  class="table_header">
+  
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_doppelkurve_test.xodr </td>
+      
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  lmr-Doku.xlmr </td>
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_DriverTrack.xodr </td>
+      
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  parking_demo_route.xlmr </td>
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_DriverTrack.xodr </td>
+      
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  parking_demo_route1.xlmr </td>
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_DriverTrack.xodr </td>
+      
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_demo.xlmr </td>
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_DriverTrack.xodr </td>
+      
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  parking_demo.xlmr </td>
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_DriverTrack.xodr </td>
+      
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  parking_demo_route.xlmr </td>
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_DriverTrack.xodr </td>
+      
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  parking_demo_route1.xlmr </td>
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_DriverTrack.xodr </td>
+      
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_demo.xlmr </td>
+      
+            
+          </tr>
+  
+          
+          <tr  class="table_header">
+  
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  ALC_DriverTrack.xodr </td>
+      
+            
+            <td class="table_cel" border bgcolor=#00FF00 >  parking_demo.xlmr </td>
+      
+            
+          </tr>
+  
+          
+
+       </table>
+
+     </body>
+     </body>
+
+
+     
+      
+     
+  
+    <img src="/static/red.png" alt="IAS-Logo">  
+
+</html>

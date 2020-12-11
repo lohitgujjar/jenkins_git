@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<Parameter version="2.13" descr="BRV223_Parameter">
+    <ParameterList version="2.13" descr="">
+
+        <!-- General settings -->
+        <Param name="simP_NetworkManagement" value="OFF"/>
+        <Param name="sysP_UseAccelInterface" value="1.0" />
+
+        <Parameter name="SimP_StartUpDelay">
+            <Para name="Duration" type="float" value="0.0" unit="s"/>
+        </Parameter>
+
+        <Parameter name="sysP_Vehicle">
+            <Para name="WheelBase" type="float" value="3.216" unit="m"/>
+            <Para name="OverhangFront" type="float" value="0.879" unit="m"/>
+            <Para name="TrackWidthFront" type="float" value="1.624" unit="m"/>
+            <Para name="TrackWidthRear" type="float" value="1.624" unit="m"/>
+            <Para name="VehicleBodyCgX" type="float" value="1.54" unit="m"/>
+            <Para name="VehicleBodyCgY" type="float" value="0.0" unit="m"/>
+            <Para name="VehicleBodyCgZ" type="float" value="0.231" unit="m"/>
+            <Para name="VehicleBodyCgIxx" type="float" value="1047.0" unit="kg*m^2"/>
+            <Para name="VehicleBodyCgIyy" type="float" value="4111.0" unit="kg*m^2"/>
+            <Para name="VehicleBodyCgIzz" type="float" value="4386.0" unit="kg*m^2"/>
+            <Para name="VehicleLength" type="float" value="5.289" unit="m"/>
+            <Para name="VehicleWidth" type="float" value="1.899" unit="m"/>
+            <Para name="VehicleHeightFloor" type="float" value="-0.19" unit="m"/>
+            <Para name="VehicleHeightRoof" type="float" value="1.3" unit="m"/>
+            <Para name="VehicleWeightTotal" type="float" value="2270" unit="kg"/>
+            <Para name="VehicleWeightUnsprung" type="float" value="286" unit="kg"/>
+            <Para name="TireDynamicRollingRadius" type="float" value="0.337" unit="m"/>
+        </Parameter>
+
+        <!--
+        * Sensor coordinate system: reference point is the center of the front axle.
+        * The positive x-axis points to the rear of the vehicle.
+        * The positive y-axis points to the right of the vehicle.
+        * -->
+		<!-- MMR Front Right-->
+        <Parameter name="senP_MMR_FR_Property">
+            <Para name="MountPosX" type="float" value="-0.49" unit="m"/>
+            <Para name="MountPosY" type="float" value="0.89" unit="m"/>
+            <!-- <Para name="MountPosZ" type="float" value="0.03" unit="m"/> --> <!-- this parameter is not supported yet -->
+            <Para name="MountAngle" type="float" value="120.0" unit="deg"/>
+            <Para name="ApertureAngle" type="float" value="140.0" unit="deg"/>
+            <Para name="MinRange" type="float" value="0.18" unit="m"/>
+            <Para name="MaxRange" type="float" value="104.0" unit="m"/>
+        </Parameter>
+
+        <!-- MMR Front Left-->
+        <Parameter name="senP_MMR_FL_Property">
+            <Para name="MountPosX" type="float" value="-0.49" unit="m"/>
+            <Para name="MountPosY" type="float" value="-0.89" unit="m"/>
+            <!-- <Para name="MountPosZ" type="float" value="0.03" unit="m"/> --> <!-- this parameter is not supported yet -->
+            <Para name="MountAngle" type="float" value="-120.0" unit="deg"/>
+            <Para name="ApertureAngle" type="float" value="140.0" unit="deg"/>
+            <Para name="MinRange" type="float" value="0.18" unit="m"/>
+            <Para name="MaxRange" type="float" value="104.0" unit="m"/>
+        </Parameter>
+
+        <!-- MMR Rear Right-->
+        <Parameter name="senP_MMR_RR_Property">
+            <Para name="MountPosX" type="float" value="4.26" unit="m"/>
+            <Para name="MountPosY" type="float" value="0.76" unit="m"/>
+            <!-- <Para name="MountPosZ" type="float" value="0.19" unit="m"/> --> <!-- this parameter is not supported yet -->
+            <Para name="MountAngleNear" type="float" value="45.0" unit="deg"/>
+            <Para name="MountAngleFar" type="float" value="10.0" unit="deg"/>
+            <Para name="ApertureAngleNear" type="float" value="140.0" unit="deg"/>
+            <Para name="ApertureAngleFar" type="float" value="30.0" unit="deg"/>
+            <Para name="MinRangeNear" type="float" value="0.18" unit="m"/>
+            <Para name="MinRangeFar" type="float" value="0.18" unit="m"/>
+            <Para name="MaxRangeNear" type="float" value="50.0" unit="m"/>
+            <Para name="MaxRangeFar" type="float" value="150.0" unit="m"/>
+        </Parameter>
+
+        <!-- MMR Rear Left-->
+        <Parameter name="senP_MMR_RL_Property">
+            <Para name="MountPosX" type="float" value="4.26" unit="m"/>
+            <Para name="MountPosY" type="float" value="-0.76" unit="m"/>
+            <!-- <Para name="MountPosZ" type="float" value="0.19" unit="m"/> --> <!-- this parameter is not supported yet -->
+            <Para name="MountAngleNear" type="float" value="-45.0" unit="deg"/>
+            <Para name="MountAngleFar" type="float" value="-10.0" unit="deg"/>
+            <Para name="ApertureAngleNear" type="float" value="140.0" unit="deg"/>
+            <Para name="ApertureAngleFar" type="float" value="30.0" unit="deg"/>
+            <Para name="MinRangeNear" type="float" value="0.18" unit="m"/>
+            <Para name="MinRangeFar" type="float" value="0.18" unit="m"/>
+            <Para name="MaxRangeNear" type="float" value="50.0" unit="m"/>
+            <Para name="MaxRangeFar" type="float" value="150.0" unit="m"/>
+        </Parameter>
+
+        <!-- LRR -->
+        <Parameter name="senP_Lrr5Property">
+            <Para name="MountPosX" type="float" value="-0.818" unit="m"/>
+            <Para name="MountPosY" type="float" value="0.0" unit="m"/>
+            <!-- <Para name="MountPosZ" type="float" value="0.352" unit="m"/> --> <!-- this parameter is not supported yet -->
+            <Para name="MountAngle" type="float" value="-180.0" unit="deg"/>
+            <Para name="ApertureAngleNear" type="float" value="120.0" unit="deg"/>
+            <Para name="ApertureAngleFar" type="float" value="18.0" unit="deg"/>
+            <Para name="MinRangeNear" type="float" value="0.0" unit="m"/>
+            <Para name="MinRangeFar" type="float" value="0.0" unit="m"/>
+            <Para name="MaxRangeNear" type="float" value="70.0" unit="m"/>
+            <Para name="MaxRangeFar" type="float" value="250.0" unit="m"/>
+        </Parameter>
+
+        <!-- SMPC -->
+        <Parameter name="senP_Smpc5Property">
+            <Para name="MountPosX" type="float" value="1.227" unit="m"/>
+            <Para name="MountPosY" type="float" value="0.0" unit="m"/>
+            <!-- <Para name="MountPosZ" type="float" value="1.01" unit="m"/> --> <!-- this parameter is not supported yet -->
+            <Para name="MountAngle" type="float" value="-180.0" unit="deg"/>
+            <Para name="ApertureAngle" type="float" value="60.0" unit="deg"/>
+            <Para name="MinRange" type="float" value="1.0" unit="m"/>
+            <Para name="MaxRange" type="float" value="200.0" unit="m"/>
+        </Parameter>
+
+        <!-- Lidar -->
+        <Parameter name="senP_Lrl5Property">
+            <Para name="MountPosX" type="float" value="-0.845" unit="m"/>
+            <Para name="MountPosY" type="float" value="-0.08693" unit="m"/>
+            <!-- <Para name="MountPosZ" type="float" value="0.23980" unit="m"/> --> <!-- this parameter is not supported yet -->
+            <Para name="MountAngle" type="float" value="-180.0" unit="deg"/>
+            <Para name="ApertureAngle" type="float" value="145.0" unit="deg"/>
+            <Para name="MinRange" type="float" value="1.0" unit="m"/>
+            <Para name="MaxRange" type="float" value="150.0" unit="m"/>
+        </Parameter>
+
+    </ParameterList>
+</Parameter>

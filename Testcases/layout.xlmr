@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lmr id="layout" version="1.0">
+    <header>
+        <author>Lohit</author>
+        <timestamp>1596679810</timestamp>
+        <xodrFile>layout.xodr</xodrFile>
+    </header>
+    <routes>
+        <route name="Route" startRoadId="33">
+            <road id="33" successor="36" />
+            <road id="36" successor="29" />
+            <road id="29" />
+        </route>
+    </routes>
+    <landmarks>
+        <landmark name="Route_start" type="none" roadId="33" ds="2.47934288435331634526e-01" t="0.00000000000000000000e+00" />
+        <landmark name="Route_end" type="none" roadId="29" ds="9.95352330438699084425e-01" t="0.00000000000000000000e+00" />
+    </landmarks>
+    <parkingbays />
+</lmr>

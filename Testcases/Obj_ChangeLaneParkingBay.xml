@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Testcase TestEnv="2.13" descr="" version="" timeout="150.0">
+    <ParameterList>
+        <Parameter name="envP_RoadNetwork">
+            <Para type="string" name="RoadNetworkFile" value="DriverTrack.xodr" unit=""/>
+            <Para type="string" name="XlmrFile" value="DriverTrack.xlmr" unit=""/>
+            <Para type="string" name="Route" value="path_1" unit=""/>
+            <Para type="string" name="LandmarkStart" value="path_1_start" unit=""/>
+            <Para type="float" name="LandmarkOffset" value="2.500000" unit="m"/>
+            <Para type="enum" name="LaneSelection" value="right6" unit=""/>
+            <Para type="float" name="LaneOffset" value="0" unit="m"/>
+        </Parameter>
+        <Parameter name="envP_ParkingBay">
+            <Para type="ui8" name="Id" value="0" unit=""/>
+            <Para type="float" name="PositionX" value="10" unit="m"/>
+            <Para type="float" name="PositionY" value="0" unit="m"/>
+            <Para type="float" name="Rotation" value="90" unit="deg"/>
+            <Para type="float" name="Length" value="6.0" unit="m"/>
+            <Para type="float" name="Width" value="2.4" unit="m"/>
+            <Para type="float" name="ShearingAngle" value="0.0" unit="deg"/>
+            <Para type="enum" name="BorderColor" value="White" unit=""/>
+            <Para type="enum" name="BorderStyle" value="Solid" unit=""/>
+            <Para type="float" name="BorderWidth" value="0.25" unit="m"/>
+            <Para type="enum" name="CornerLayout" value="X" unit=""/>
+            <Para type="ui8" name="Repetition" value="0" unit=""/>
+            <Para type="float" name="Spacing" value="0.2" unit="m"/>
+            <Para type="float" name="ArrangementAngle" value="0.0" unit="deg"/>
+        </Parameter>
+    </ParameterList>
+    <State id="0">
+        <Action name="Dri_PrepareVehicle"/>
+        <Event name="E_PrepareVehicle"/>
+    </State>
+    <State id="1">
+        <Action name="Obj_Initialize">
+            <ActionPara type="enum" name="ObjectId" value="Obj1" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="ParkingBay" unit=""/>
+            <ActionPara type="string" name="Route" value="path_1" unit=""/>
+            <ActionPara type="int" name="ParkingSpaceId" value="0" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="1.0" unit="s"/>
+        </Event>
+    </State>
+    <State id="2">
+        <Action name="Obj_ChangeLane">
+            <ActionPara type="enum" name="ObjectId" value="Obj1" unit=""/>
+            <ActionPara type="enum" name="Direction" value="Left" unit=""/>
+            <ActionPara type="float" name="TransitionDistance" value="50" unit="m"/>
+        </Action>
+        <!-- Rule: Object %u is not in AbsSysLane to perform the action ‘Obj_ChangeLane‘-->
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="2.0" unit="s"/>
+        </Event>
+    </State>
+    <State id="3" final="true"/>
+</Testcase>

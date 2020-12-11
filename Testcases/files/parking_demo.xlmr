@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lmr id="ALC_DriverTrack" version="1.0">
+    <header>
+        <author>Lohit</author>
+        <timestamp>1595907924</timestamp>
+        <xodrFile>ALC_DriverTrack.xodr</xodrFile>
+    </header>
+    <routes>
+        <route name="Route" startRoadId="1">
+            <road id="1" />
+        </route>
+    </routes>
+    <landmarks>
+        <landmark name="Route_start" type="none" roadId="1" ds="1.60546316102012042393e+02" t="0.00000000000000000000e+00" />
+        <landmark name="Route_end" type="none" roadId="1" ds="2.88983368983621585357e+03" t="0.00000000000000000000e+00" />
+        <landmark name="Milestone" type="milestone" roadId="1" ds="8.99059370171266891703e+02" t="4.00000000000000022204e-01" />
+    </landmarks>
+    <parkingbays>
+        <parkingbay positionname="ParkingBay" x="6.74294527628450396151e+02" y="0.00000000000000000000e+00" />
+    </parkingbays>
+</lmr>

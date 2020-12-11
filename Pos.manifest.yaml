@@ -1,0 +1,10 @@
+---
+Pos:
+  file: Pos.so
+  sha256: dc4b90b5fef7d9a010ea0c91c10adb1f76d3b71de655ebd680b18a06b8c45a38
+
+shared:
+  Pos:
+    file: PosGlue.h
+    sha256: d3288f563ff7110ebba30b40e26688fe104eecdf42f1d1e82fd58cdba12d5df1
+

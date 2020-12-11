@@ -1,0 +1,10 @@
+---
+TrackBase:
+  file: OpenDriveCom.so
+  sha256: 59ca5a54f259c666d1abb6eedf21df60993856adc9254102af3ec1dd93b53c4a
+
+shared:
+  TrackBase:
+    file: TrackBaseGlue.h
+    sha256: 2249a0a48cc4491b64993d5e4ca3070a41f2f54fa8ee91738f1ca6390bd8189c
+

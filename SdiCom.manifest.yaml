@@ -1,0 +1,13 @@
+---
+SdiCom:
+  file: SdiCom.so
+  sha256: 6259a584de008d2157f4af297e219e717328f645a5e77c7bd62def1e374015e5
+sensorDataInterface:
+  file: libSensorDataInterface.so
+  sha256: 6a3133759b50e8c7d03f825e44ebba76fe9ddfb46c760ed24fc985c2a3ad2d1d
+
+shared:
+  SdiCom:
+    file: SdiComGlue.h
+    sha256: 90fc1a2e7b4500e78c86b29d6decd43f2f0489cf94f5c1fdd2ef61c7c8671303
+

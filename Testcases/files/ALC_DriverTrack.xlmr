@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<lmr version="1.0">
+  <header>
+     <author>nobody</author>
+     <timestamp>0</timestamp>
+     <xodrFile>DriverTrack.xodr</xodrFile>
+  </header>
+  <routes>
+    <route name="path_1" startRoadId="1" >
+      <road id="1" />
+    </route>
+  </routes>
+  <landmarks>
+    <landmark name="path_1_start" type="none" roadId="1" ds="0.0000000000000000e+00" />
+    <landmark name="path_1_test_1" type="none" roadId="1" ds="2.0000000000000000e+01" />
+    <landmark name="path_1_test_2" type="none" roadId="1" ds="5.0000000000000000e+01" />
+    <landmark name="path_1_test_3" type="none" roadId="1" ds="1.0000000000000000e+02" />
+    <landmark name="path_1_end" type="none" roadId="1" ds="3.0000000000000000e+03" />
+  </landmarks>
+</lmr>
+

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Testcase TestEnv="2.13" descr="ALC_six_objects_curvedroad" version="$Id$">
+    <ParameterList>
+        <Parameter name="envP_RoadNetwork">
+            <Para type="string" name="RoadNetworkFile" value="ALC_doppelkurve.xodr" unit=""/>
+            <Para type="string" name="XlmrFile" value="ALC_doppelkurve.xlmr" unit=""/>
+            <Para type="string" name="Route" value="path_1" unit=""/>
+            <Para type="string" name="LandmarkStart" value="path_1_start" unit=""/>
+            <Para type="float" name="LandmarkOffset" value="15" unit="m"/>
+            <Para type="enum" name="LaneSelection" value="left3" unit=""/>
+            <Para type="enum" name="LongitudinalAxis" value="rear" unit=""/>
+            <Para type="float" name="LaneOffset" value="0.0" unit="m"/>
+            <Para type="enum" name="SideAxis" value="middle" unit=""/>
+            <Para type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Parameter>
+        <Parameter name="objP_Setup">
+            <Para type="enum" name="ObjectId" value="Obj1" unit=""/>
+            <!--enum Class VEHICLE_TRAILER - -->
+            <Para type="float" name="Width" value="2.5" unit="m"/>
+            <Para type="float" name="Length" value="15" unit="m"/>
+        </Parameter>
+        <Parameter name="objP_Setup">
+            <Para type="enum" name="ObjectId" value="Obj2" unit=""/>
+            <!--enum Class VEHICLE_BICYCLE_MOTORBIKE - -->
+            <Para type="float" name="Width" value="0.65" unit="m"/>
+            <Para type="float" name="Length" value="1.8" unit="m"/>
+        </Parameter>
+        <Parameter name="objP_Setup">
+            <Para type="enum" name="ObjectId" value="Obj5" unit=""/>
+            <Para type="float" name="Width" value="0.65" unit="m"/>
+            <Para type="float" name="Length" value="1.8" unit="m"/>
+        </Parameter>
+    </ParameterList>
+    <!--sys vehicle door closed and ignition on, object activated-->
+    <!--Compare X position of a System Vehicle-->
+    <!--Compare Y position of a System Vehicle-->
+    <!--Compare X position of obj1,obj2,obj3,obj4,obj5 and obj6-->
+    <!--Compare Y position of obj1,obj2,obj3,obj4,obj5 and obj6-->
+    <State id="0">
+        <Action name="Dri_PrepareVehicle"/>
+        <Action name="Obj_Initialize">
+            <ActionPara type="string" name="LandmarkStart" value="path_1_start" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left4" unit=""/>
+            <ActionPara type="enum" name="ObjectId" value="Obj1" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="string" name="Route" value="path_1" unit=""/>
+            <ActionPara type="float" name="LandmarkOffset" value="35" unit="m"/>
+            <ActionPara type="enum" name="LongitudinalAxis" value="rear" unit=""/>
+            <ActionPara type="float" name="LaneOffset" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="SideAxis" value="middle" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_Initialize">
+            <ActionPara type="string" name="LandmarkStart" value="path_1_start" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left2" unit=""/>
+            <ActionPara type="enum" name="ObjectId" value="Obj2" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="string" name="Route" value="path_1" unit=""/>
+            <ActionPara type="float" name="LandmarkOffset" value="30" unit="m"/>
+            <ActionPara type="enum" name="LongitudinalAxis" value="rear" unit=""/>
+            <ActionPara type="float" name="LaneOffset" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="SideAxis" value="middle" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_Initialize">
+            <ActionPara type="string" name="LandmarkStart" value="path_1_start" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left2" unit=""/>
+            <ActionPara type="enum" name="ObjectId" value="Obj3" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="string" name="Route" value="path_1" unit=""/>
+            <ActionPara type="float" name="LandmarkOffset" value="25" unit="m"/>
+            <ActionPara type="enum" name="LongitudinalAxis" value="rear" unit=""/>
+            <ActionPara type="float" name="LaneOffset" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="SideAxis" value="middle" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_Initialize">
+            <ActionPara type="string" name="LandmarkStart" value="path_1_start" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left3" unit=""/>
+            <ActionPara type="enum" name="ObjectId" value="Obj4" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="string" name="Route" value="path_1" unit=""/>
+            <ActionPara type="float" name="LandmarkOffset" value="40" unit="m"/>
+            <ActionPara type="enum" name="LongitudinalAxis" value="rear" unit=""/>
+            <ActionPara type="float" name="LaneOffset" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="SideAxis" value="middle" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_Initialize">
+            <ActionPara type="string" name="LandmarkStart" value="path_1_start" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left4" unit=""/>
+            <ActionPara type="enum" name="ObjectId" value="Obj5" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="string" name="Route" value="path_1" unit=""/>
+            <ActionPara type="float" name="LandmarkOffset" value="5" unit="m"/>
+            <ActionPara type="enum" name="LongitudinalAxis" value="rear" unit=""/>
+            <ActionPara type="float" name="LaneOffset" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="SideAxis" value="middle" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_Initialize">
+            <ActionPara type="string" name="LandmarkStart" value="path_1_start" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left2" unit=""/>
+            <ActionPara type="enum" name="ObjectId" value="Obj6" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="string" name="Route" value="path_1" unit=""/>
+            <ActionPara type="float" name="LandmarkOffset" value="5" unit="m"/>
+            <ActionPara type="enum" name="LongitudinalAxis" value="rear" unit=""/>
+            <ActionPara type="float" name="LaneOffset" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="SideAxis" value="middle" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Rule type="SignalCmp" name="SysVehicle_posX">
+            <RulePara type="string" name="ComparedValue" value="16.64" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="string" name="SignalName" value="SysVehicle_posX" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="SysVehicle_posY">
+            <RulePara type="string" name="ComparedValue" value="7.90" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="string" name="SignalName" value="SysVehicle_posY" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posX_1">
+            <RulePara type="string" name="ComparedValue" value="41.50" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="x_1" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posY_1">
+            <RulePara type="string" name="ComparedValue" value="11.64" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="y_1" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posX_2">
+            <RulePara type="string" name="ComparedValue" value="29.90" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="x_2" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posY_2">
+            <RulePara type="string" name="ComparedValue" value="4.15" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="y_2" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posX_3">
+            <RulePara type="string" name="ComparedValue" value="26.00" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="x_3" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posY_3">
+            <RulePara type="string" name="ComparedValue" value="4.15" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="y_3" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posX_4">
+            <RulePara type="string" name="ComparedValue" value="41.00" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="x_4" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posY_4">
+            <RulePara type="string" name="ComparedValue" value="7.90" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="y_4" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posX_5">
+            <RulePara type="string" name="ComparedValue" value="4.89" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="x_5" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posY_5">
+            <RulePara type="string" name="ComparedValue" value="11.64" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="y_5" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posX_6">
+            <RulePara type="string" name="ComparedValue" value="6.00" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="x_6" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Obj_posY_6">
+            <RulePara type="string" name="ComparedValue" value="4.15" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="float" name="ToleranceTimeStart" value="0.01" unit="s"/>
+            <RulePara type="string" name="SignalName" value="y_6" unit=""/>
+        </Rule>
+        <Event name="E_PrepareVehicle"/>
+    </State>
+    <!--Sys and obj1, obj2,obj3, obj4, obj5 and obj6 veh start to achieve around 70kmph-->
+    <!--Compare velocity of a system Vehicle-->
+    <!--Compare velocity of obj1, obj2, obj3, obj4, obj5 and obj6-->
+    <State id="1">
+        <Action name="Dri_SetLongitudinalSpeed">
+            <ActionPara type="float" name="TargetSpeed" value="70" unit="km/h"/>
+            <ActionPara type="float" name="TransitionTime" value="5" unit="s"/>
+        </Action>
+        <Rule type="SignalCmp" name="SysVehicle_velX">
+            <RulePara type="string" name="ComparedValue" value="70" unit=""/>
+            <RulePara type="enum" name="Mode" value="never" unit=""/>
+            <RulePara type="enum" name="Operator" value="greater" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="string" name="SignalName" value="SysVehicle_velX" unit=""/>
+        </Rule>
+        <Action name="Obj_SetLongitudinalSpeed">
+            <ActionPara type="enum" name="ObjectId" value="Obj1" unit=""/>
+            <ActionPara type="float" name="TargetSpeed" value="70" unit="km/h"/>
+            <ActionPara type="float" name="TransitionTime" value="5" unit="s"/>
+        </Action>
+        <Rule type="SignalCmp" name="Obj_velX_1">
+            <RulePara type="string" name="ComparedValue" value="70" unit=""/>
+            <RulePara type="enum" name="Mode" value="never" unit=""/>
+            <RulePara type="enum" name="Operator" value="greater" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="string" name="SignalName" value="vx_1" unit=""/>
+        </Rule>
+        <Action name="Obj_SetLongitudinalSpeed">
+            <ActionPara type="enum" name="ObjectId" value="Obj2" unit=""/>
+            <ActionPara type="float" name="TargetSpeed" value="70" unit="km/h"/>
+            <ActionPara type="float" name="TransitionTime" value="5" unit="s"/>
+        </Action>
+        <Rule type="SignalCmp" name="Obj_velX_2">
+            <RulePara type="string" name="ComparedValue" value="70" unit=""/>
+            <RulePara type="enum" name="Mode" value="never" unit=""/>
+            <RulePara type="enum" name="Operator" value="greater" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="string" name="SignalName" value="vx_2" unit=""/>
+        </Rule>
+        <Action name="Obj_SetLongitudinalSpeed">
+            <ActionPara type="enum" name="ObjectId" value="Obj3" unit=""/>
+            <ActionPara type="float" name="TargetSpeed" value="70" unit="km/h"/>
+            <ActionPara type="float" name="TransitionTime" value="5" unit="s"/>
+        </Action>
+        <Rule type="SignalCmp" name="Obj_velX_3">
+            <RulePara type="string" name="ComparedValue" value="70" unit=""/>
+            <RulePara type="enum" name="Mode" value="never" unit=""/>
+            <RulePara type="enum" name="Operator" value="greater" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="string" name="SignalName" value="vx_3" unit=""/>
+        </Rule>
+        <Action name="Obj_SetLongitudinalSpeed">
+            <ActionPara type="enum" name="ObjectId" value="Obj4" unit=""/>
+            <ActionPara type="float" name="TargetSpeed" value="69" unit="km/h"/>
+            <ActionPara type="float" name="TransitionTime" value="5" unit="s"/>
+        </Action>
+        <Rule type="SignalCmp" name="Obj_velX_4">
+            <RulePara type="string" name="ComparedValue" value="69" unit=""/>
+            <RulePara type="enum" name="Mode" value="never" unit=""/>
+            <RulePara type="enum" name="Operator" value="greater" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="string" name="SignalName" value="vx_4" unit=""/>
+        </Rule>
+        <Action name="Obj_SetLongitudinalSpeed">
+            <ActionPara type="enum" name="ObjectId" value="Obj5" unit=""/>
+            <ActionPara type="float" name="TargetSpeed" value="70" unit="km/h"/>
+            <ActionPara type="float" name="TransitionTime" value="5" unit="s"/>
+        </Action>
+        <Rule type="SignalCmp" name="Obj_velX_4">
+            <RulePara type="string" name="ComparedValue" value="69" unit=""/>
+            <RulePara type="enum" name="Mode" value="never" unit=""/>
+            <RulePara type="enum" name="Operator" value="greater" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="string" name="SignalName" value="vx_4" unit=""/>
+        </Rule>
+        <Action name="Obj_SetLongitudinalSpeed">
+            <ActionPara type="enum" name="ObjectId" value="Obj6" unit=""/>
+            <ActionPara type="float" name="TargetSpeed" value="69" unit="km/h"/>
+            <ActionPara type="float" name="TransitionTime" value="5" unit="s"/>
+        </Action>
+        <Rule type="SignalCmp" name="Obj_velX_4">
+            <RulePara type="string" name="ComparedValue" value="69" unit=""/>
+            <RulePara type="enum" name="Mode" value="never" unit=""/>
+            <RulePara type="enum" name="Operator" value="greater" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.02" unit=""/>
+            <RulePara type="string" name="SignalName" value="vx_4" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="5" unit="s"/>
+        </Event>
+    </State>
+    <State id="2">
+        <Action name="Dri_SetFasSwitchMode">
+            <ActionPara type="enum" name="LCA" value="On_Drv_Rq" unit=""/>
+        </Action>
+        <Action name="Dri_SetIndicatorState">
+            <ActionPara type="enum" name="state" value="right" unit=""/>
+            <ActionPara type="int" name="duration" value="7000" unit="ms"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="2" unit="s"/>
+        </Event>
+    </State>
+    <State id="3">
+        <Action name="Dri_SetLateralReference">
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left2" unit=""/>
+        </Action>
+        <Action name="Dri_SetLateralDisplacement">
+            <ActionPara type="float" name="TargetDisplacement" value="0.0" unit="m"/>
+            <ActionPara type="float" name="TransitionTime" value="5" unit="s"/>
+            <ActionPara type="enum" name="BasePoint" value="line" unit=""/>
+            <ActionPara type="enum" name="SideAxis" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralReference">
+            <ActionPara type="enum" name="ObjectId" value="Obj5" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left3" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralDisplacement">
+            <ActionPara type="enum" name="ObjectId" value="Obj5" unit=""/>
+            <ActionPara type="float" name="TargetDisplacement" value="0.5" unit="m"/>
+            <ActionPara type="enum" name="BasePoint" value="line" unit=""/>
+            <ActionPara type="float" name="TransitionTime" value="5.0" unit="s"/>
+            <ActionPara type="enum" name="TransitionType" value="spline" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralReference">
+            <ActionPara type="enum" name="ObjectId" value="Obj3" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left3" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralDisplacement">
+            <ActionPara type="enum" name="ObjectId" value="Obj3" unit=""/>
+            <ActionPara type="float" name="TargetDisplacement" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="BasePoint" value="line" unit=""/>
+            <ActionPara type="float" name="TransitionTime" value="5.0" unit="s"/>
+            <ActionPara type="enum" name="TransitionType" value="spline" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralReference">
+            <ActionPara type="enum" name="ObjectId" value="Obj6" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left3" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralDisplacement">
+            <ActionPara type="enum" name="ObjectId" value="Obj6" unit=""/>
+            <ActionPara type="float" name="TargetDisplacement" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="BasePoint" value="line" unit=""/>
+            <ActionPara type="float" name="TransitionTime" value="4.0" unit="s"/>
+            <ActionPara type="enum" name="TransitionType" value="spline" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="7" unit="s"/>
+        </Event>
+    </State>
+    <State id="4">
+        <Action name="Dri_SetIndicatorState">
+            <ActionPara type="enum" name="state" value="left" unit=""/>
+            <ActionPara type="int" name="duration" value="7000" unit="ms"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="2" unit="s"/>
+        </Event>
+    </State>
+    <State id="5">
+        <Action name="Dri_SetLateralReference">
+            <ActionPara type="enum" name="LaneAlignment" value="right" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left4" unit=""/>
+        </Action>
+        <Action name="Dri_SetLateralDisplacement">
+            <ActionPara type="float" name="TargetDisplacement" value="0.0" unit="m"/>
+            <ActionPara type="float" name="TransitionTime" value="5" unit="s"/>
+            <ActionPara type="enum" name="BasePoint" value="line" unit=""/>
+            <ActionPara type="enum" name="SideAxis" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralReference">
+            <ActionPara type="enum" name="ObjectId" value="Obj4" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left2" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralDisplacement">
+            <ActionPara type="enum" name="ObjectId" value="Obj4" unit=""/>
+            <ActionPara type="float" name="TargetDisplacement" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="BasePoint" value="line" unit=""/>
+            <ActionPara type="float" name="TransitionTime" value="3.0" unit="s"/>
+            <ActionPara type="enum" name="TransitionType" value="spline" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralReference">
+            <ActionPara type="enum" name="ObjectId" value="Obj2" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left3" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralDisplacement">
+            <ActionPara type="enum" name="ObjectId" value="Obj2" unit=""/>
+            <ActionPara type="float" name="TargetDisplacement" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="BasePoint" value="line" unit=""/>
+            <ActionPara type="float" name="TransitionTime" value="3.0" unit="s"/>
+            <ActionPara type="enum" name="TransitionType" value="spline" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralReference">
+            <ActionPara type="enum" name="ObjectId" value="Obj3" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left2" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralDisplacement">
+            <ActionPara type="enum" name="ObjectId" value="Obj3" unit=""/>
+            <ActionPara type="float" name="TargetDisplacement" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="BasePoint" value="line" unit=""/>
+            <ActionPara type="float" name="TransitionTime" value="3.0" unit="s"/>
+            <ActionPara type="enum" name="TransitionType" value="spline" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralReference">
+            <ActionPara type="enum" name="ObjectId" value="Obj5" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left4" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralDisplacement">
+            <ActionPara type="enum" name="ObjectId" value="Obj5" unit=""/>
+            <ActionPara type="float" name="TargetDisplacement" value="1.0" unit="m"/>
+            <ActionPara type="enum" name="BasePoint" value="line" unit=""/>
+            <ActionPara type="float" name="TransitionTime" value="3.0" unit="s"/>
+            <ActionPara type="enum" name="TransitionType" value="spline" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralReference">
+            <ActionPara type="enum" name="ObjectId" value="Obj6" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="AbsSysLane" unit=""/>
+            <ActionPara type="enum" name="LaneSelection" value="left2" unit=""/>
+            <ActionPara type="enum" name="LaneAlignment" value="middle" unit=""/>
+        </Action>
+        <Action name="Obj_SetLateralDisplacement">
+            <ActionPara type="enum" name="ObjectId" value="Obj6" unit=""/>
+            <ActionPara type="float" name="TargetDisplacement" value="0.0" unit="m"/>
+            <ActionPara type="enum" name="BasePoint" value="line" unit=""/>
+            <ActionPara type="float" name="TransitionTime" value="3.0" unit="s"/>
+            <ActionPara type="enum" name="TransitionType" value="spline" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="6" unit="s"/>
+        </Event>
+    </State>
+    <State id="3" final="true"/>
+</Testcase>

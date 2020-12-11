@@ -1,0 +1,207 @@
+Testcase Nummber:1
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm9072.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm9072.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm9072.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:2
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8948.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8948.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8948.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:3
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8725-1.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8725-1.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8725-1.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:4
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-2.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-2.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-2.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:5
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8970.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8970.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8970.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:6
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/parkingBayDemo.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/parkingBayDemo.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/parkingBayDemo.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:7
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/Obj_ChangeLaneParkingBay.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/Obj_ChangeLaneParkingBay.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/Obj_ChangeLaneParkingBay.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:8
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/trkP_ParkingBay.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/trkP_ParkingBay.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/trkP_ParkingBay.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:9
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/Opendrive_testcase.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/Opendrive_testcase.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/Opendrive_testcase.xmllog
+.
+Testcase Nummber:10
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/ALC3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/ALC3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/ALC3.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:11
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/Pfadliste.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/Pfadliste.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/files/Pfadliste.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:12
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-6.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-6.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-6.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:13
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm3259-3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm3259-3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm3259-3.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:14
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/parkingBayDemo.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/parkingBayDemo.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/parkingBayDemo.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:15
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm3259-1.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm3259-1.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm3259-1.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:16
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8725-3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8725-3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8725-3.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:17
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8239.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8239.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8239.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:18
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/Obj_ChangeLaneParkingBay.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/Obj_ChangeLaneParkingBay.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/Obj_ChangeLaneParkingBay.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:19
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-4.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-4.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-4.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:20
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/trkP_ParkingBay.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/trkP_ParkingBay.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/trkP_ParkingBay.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:21
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm7794.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm7794.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm7794.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:22
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm3503-3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm3503-3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm3503-3.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:23
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8725-2.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8725-2.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8725-2.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:24
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-7.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-7.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-7.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:25
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/Opendrive_testcase.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/Opendrive_testcase.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/Opendrive_testcase.xmllog
+.
+Testcase Nummber:26
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-3.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:27
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/ALC3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/ALC3.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/ALC3.xmllog
+.
+Testcase Nummber:28
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-1.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-1.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-1.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:29
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-5.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-5.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/rm8319-5.xmllog
+OpenDRIVE XML Schema Validation failed
+.
+Testcase Nummber:30
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/DriveSim
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/Pfadliste.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/Pfadliste.xml
+/home/lovee692/Musik/docker-project/DriveSim_Build_5.20.36.0/Testcases/Pfadliste.xmllog
+OpenDRIVE XML Schema Validation failed
+.

@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Testcase TestEnv="2.13" descr="CAQ-TS-13650" version="3.0">
+    <ParameterList>
+        <Parameter name="envP_RoadNetwork">
+            <Para type="string" name="RoadNetworkFile" value="rm8725.xodr" unit=""/>
+            <Para type="string" name="XlmrFile" value="rm8725.xlmr" unit=""/>
+            <Para type="string" name="Route" value="sys_path" unit=""/>
+            <Para type="enum" name="LongitudinalAxis" value="front" unit=""/>
+            <Para type="enum" name="SideAxis" value="middle" unit=""/>
+            <Para type="string" name="LandmarkStart" value="sys_path_start" unit=""/>
+            <Para type="float" name="LandmarkOffset" value="5" unit="m"/>
+            <Para type="enum" name="LaneSelection" value="right1" unit=""/>
+            <Para type="enum" name="LaneAlignment" value="middle" unit=""/>
+            <Para type="float" name="LaneOffset" value="0" unit="m"/>
+        </Parameter>
+        <Parameter name="objP_Setup">
+            <Para type="enum" name="ObjectId" value="Obj1" unit=""/>
+            <Para type="enum" name="CollisionDetection" value="on" unit=""/>
+            <Para type="enum" name="Class" value="VEHICLE_CAR" unit=""/>
+        </Parameter>
+    </ParameterList>
+    <State id="1">
+        <Action name="Dri_PrepareVehicle"/>
+        <Event name="E_PrepareVehicle"/>
+    </State>
+    <State id="2">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="PTSSoftKey" value="NDEF1" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="3">
+        <Rule type="SignalCmp" name="PTSSoftKey_NDEF1">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_PTS_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="4">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="5">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="PTSSoftKey" value="PSD" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="6">
+        <Rule type="SignalCmp" name="PTSSoftKey_PSD">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_PTS_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="2" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="7">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="ParkSoftKey" value="NDEF1" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="8">
+        <Rule type="SignalCmp" name="ParkSoftKey_NDEF1">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_SoftKey_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="9">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="10">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="ParkSoftKey" value="PSD" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="11">
+        <Rule type="SignalCmp" name="ParkSoftKey_PSD">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_SoftKey_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="2" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="12">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="13">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="ParkAlphaModel" value="Val1" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="14">
+        <Rule type="SignalCmp" name="ParkAlphaModel_Val1">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_Alpha_Model_HU_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="15">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="16">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="ParkAlphaModel" value="Val2" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="17">
+        <Rule type="SignalCmp" name="ParkAlphaModel_Val2">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_Alpha_Model_HU_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="2" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="18">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="19">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="DAAOffSwitch" value="NDEF1" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="20">
+        <Rule type="SignalCmp" name="DAAOffSwitch_NDEF1">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_DAA_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="21">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="19">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="DAAOffSwitch" value="NPSD" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="20">
+        <Rule type="SignalCmp" name="DAAOffSwitch_NPSD">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_DAA_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="21">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="22">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="DAAOffSwitch" value="PSD" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="23">
+        <Rule type="SignalCmp" name="DAAOffSwitch_PSD">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_DAA_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="2" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="24">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="MSPOffSwitch" value="NDEF1" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="25">
+        <Rule type="SignalCmp" name="MSPOffSwitch_NDEF1">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_MSP_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="26">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="24">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="MSPOffSwitch" value="NPSD" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="25">
+        <Rule type="SignalCmp" name="MSPOffSwitch_NPSD">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_MSP_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="26">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="27">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="MSPOffSwitch" value="PSD" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="28">
+        <Rule type="SignalCmp" name="MSPOffSwitch_PSD">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_MSP_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="2" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="26">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="29">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="int" name="HitchtronicKinkAngle" value="90" unit="deg"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="30">
+        <Rule type="SignalCmp" name="HitchtronicKinkAngle_0">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_Hitch_KinkAngl_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="180" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="31">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="32">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="int" name="HitchtronicKinkAngle" value="0" unit="deg"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="33">
+        <Rule type="SignalCmp" name="HitchtronicKinkAngle_180">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_Hitch_KinkAngl_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="90" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="34">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="35">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="HomeParkingTrajectoryLearn" value="PSD" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="36">
+        <Rule type="SignalCmp" name="HomeParkingTrajectoryLearn_PSD">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_HPLrnTrajBtn_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="37">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="38">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="HomeParkingTrajectoryLearn" value="NPSD" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="39">
+        <Rule type="SignalCmp" name="HomeParkingTrajectoryLearn_NPSD">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_HPLrnTrajBtn_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="40">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="41">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="PDDImageMemory" value="RAW1" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="42">
+        <Rule type="SignalCmp" name="PDDImageMemory_RAW1">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_PDDImageMem_Ack_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="43">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="44">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="PDDImageMemory" value="RAW5" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="45">
+        <Rule type="SignalCmp" name="PDDImageMemory_RAW5">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_PDDImageMem_Ack_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="5" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="46">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="47">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="HUDisplayContent" value="ON_PTS_POPUP" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="48">
+        <Rule type="SignalCmp" name="HUDisplayContent_ON_PTS_POPUP">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_PartA_Content_HU_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="49">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="50">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="HUDisplayContent" value="ON_HOMEPARKING_TV" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="51">
+        <Rule type="SignalCmp" name="HUDisplayContent_ON_HOMEPARKING_TV">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_PartA_Content_HU_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="28" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="52">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="53">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="HUDisplayContent" value="ON_3D_DEFAULT" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="54">
+        <Rule type="SignalCmp" name="HUDisplayContent_ON_3D_DEFAULT">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_PartA_Content_HU_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="8" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="55">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+    <State id="56">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="HUDisplayContent" value="ON_SVS_GET_OUT" unit=""/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+    <State id="57">
+        <Rule type="SignalCmp" name="HUDisplayContent_ON_SVS_GET_OUT">
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="SignalName" value="Park_PartA_Content_HU_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="19" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="10" final="true"/>
+</Testcase>

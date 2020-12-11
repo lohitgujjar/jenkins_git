@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Testcase descr="apc_park_space_left" timeout="300.0" version="" testEnv="2.13">
+
+    <ParameterList>
+      <Parameter name="envP_RoadNetwork">
+        <Para name="RoadNetworkFile" type="string" value="rm3503-3.xodr" unit="-"/>
+        <Para name="XlmrFile" type="string" value="rm3503-3.xlmr" unit="-"/>
+        <!--Para name="VScenarioFile" type="string" value="Parkplatz/Parkplatz_Linien.xml" unit="-"/-->
+        <Para name="Route" type="string" value="path_1" unit="-"/>
+        <Para name="LandmarkStart" type="string" value="path_1_start" unit="-"/>
+        <Para name="LandmarkOffset" type="float" value=".00000" unit="m"/>
+        <Para name="LaneSelection" type="enum" value="ref" unit="-"/>
+        <Para name="LaneOffset" type="float" value="-2.00000" unit="m"/>
+      </Parameter>
+    </ParameterList>
+
+    <State id="1">
+        <!-- DTR ist noch nicht soweit -->
+        <Rule name="State1_Rule_1" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="DAP_ParkSens_Stat_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="0" unit=""/>
+        </Rule>
+        <Rule name="State1_Rule_2" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="DAP_RemainDist_Age_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="0" unit=""/>
+        </Rule>
+        <Event name="E_time">
+            <EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="0">
+        <Action name="Dri_PrepareVehicle"/>
+        <Event name="E_PrepareVehicle"/>
+    </State>
+
+    <State id="1">
+        <!-- Systemfahrzeug starten -->
+        <!-- <Action name="Dri_SetIgnitionState">
+            <ActionPara name="State" type="enum" value="IGN_LOCK" unit=""/>
+        </Action> -->
+        <Action name="Dri_SwitchGear">
+            <ActionPara name="Position" type="enum" value="N" unit=""/>
+        </Action>
+        <Action name="Dri_SetBrakePedal">
+            <ActionPara name="Position" type="float" value="100" unit="%"/>
+        </Action>
+        <Event name="E_time">
+            <EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+        </Event>
+
+    </State>
+
+   <State id="3">
+        <!-- DTR ist soweit -->
+        <Rule name="State3_Rule_1" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="any" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="DAP_ParkSens_Stat_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="3" unit=""/>
+            <RulePara name="Tolerance" type="float" value="0.1" unit=""/>
+        </Rule>
+        <Action name="Dri_SetIgnitionState">
+            <ActionPara name="State" type="enum" value="IGN_ON" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="4">
+        <Action name="Obj_SetActivationState">
+            <ActionPara name="ObjectID" type="enum" value="Obj1" unit=""/>
+            <ActionPara name="ReferenceSystem" type="enum" value="AbsSys" unit=""/>
+            <ActionPara name="State" type="enum" value="active" unit=""/>
+            <ActionPara name="PositionX" type="float" value="7.0" unit="m"/>
+            <ActionPara name="PositionY" type="float" value="0.0" unit="m"/>
+        </Action>
+        <Action name="Obj_SetActivationState">
+            <ActionPara name="ObjectID" type="enum" value="Obj2" unit=""/>
+            <ActionPara name="ReferenceSystem" type="enum" value="AbsSys" unit=""/>
+            <ActionPara name="State" type="enum" value="active" unit=""/>
+            <ActionPara name="PositionX" type="float" value="3.0" unit="m"/>
+            <ActionPara name="PositionY" type="float" value="2.5" unit="m"/>
+        </Action>
+         <Event name="E_time">
+            <EventPara name="StateTime" type="float" value="1.1" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="5">
+        <!-- Obwohl Obj2 näher zum Systemfahrzeug steht, wird er nicht betrachtet,
+        da er sich nicht auf der Ego-Lane befindet. Nur Objekte die sich auf der Ego-Lane
+        befinden, sind relevant. -->
+        <Rule name="State5_Rule_1" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="greater" unit=""/>
+            <RulePara name="SignalName" type="string" value="DAP_RemainDist_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="4.2" unit=""/>
+            <RulePara name="Tolerance" type="float" value="0.1" unit=""/>
+        </Rule>
+
+        <Rule name="State5_Rule_1" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="less" unit=""/>
+            <RulePara name="SignalName" type="string" value="DAP_RemainDist_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="4.6" unit=""/>
+            <RulePara name="Tolerance" type="float" value="0.1" unit=""/>
+        </Rule>
+        <Event name="E_time">
+            <EventPara name="StateTime" type="float" value="5.1" unit="s"/>
+        </Event>
+    </State>
+
+
+    <State id="13" final="true"/>
+</Testcase>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<lmr version="1.0">
+
+  <header>
+     <author>nobody</author>
+     <timestamp>0</timestamp>
+     <xodrFile>example.xodr</xodrFile>
+  </header>
+  
+  <routes>
+    <route name="path_1" startRoadId="1031" >
+      <road id="1031"/>
+    </route>
+  </routes>
+  <landmarks>
+    <landmark name="path_1_start" type="none" roadId="1031" ds="0.0000000000000000e+00" />
+    <landmark name="path_1_end" type="none" roadId="1031" ds="6.1040248079496894e+02" />
+  </landmarks>
+</lmr>
+

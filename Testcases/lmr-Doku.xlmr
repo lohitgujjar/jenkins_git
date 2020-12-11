@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lmr id="ALC_doppelkurve_test" version="1.0">
+    <header>
+        <author>basal491</author>
+        <timestamp>1602510591</timestamp>
+        <xodrFile>ALC_doppelkurve_test.xodr</xodrFile>
+    </header>
+    <routes>
+        <route name="Route" startRoadId="1">
+            <road id="1" />
+        </route>
+    </routes>
+    <landmarks>
+        <landmark name="Route_start" type="none" roadId="1" ds="3.17947976878656390909e-02" t="0.00000000000000000000e+00" />
+        <landmark name="Route_end" type="none" roadId="1" ds="6.68379537572254349698e+01" t="0.00000000000000000000e+00" />
+    </landmarks>
+    <parkingbays />
+</lmr>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Testcase TestEnv="2.13" descr="2" version="Revision: 1.0">
+    <ParameterList descr="..." version="2.13">
+        <Parameter name="EnvP_RoadNetwork">
+            <Para type="string" name="RoadNetworkFile" value="rm8725-3.xodr" unit=""/>
+            <Para type="string" name="XlmrFile" value="rm8725-3.xlmr" unit=""/>
+            <Para type="string" name="Route" value="SysPath" unit=""/>
+            <Para type="string" name="LandmarkStart" value="SysPath_start" unit=""/>
+            <Para type="float" name="LandmarkOffset" value="0.0" unit="m"/>
+            <Para type="enum" name="LaneSelection" value="right1" unit=""/>
+            <Para type="float" name="LaneOffset" value="0.0" unit="m"/>
+        </Parameter>
+        <!-- Define the radial view of the DFT-Interface-->
+        <Parameter name="SimP_SightDistanceSDI">
+            <Para type="float" name="MaxVisibility" value="50.0" unit="m"/>
+        </Parameter>
+        <!-- Define the sample distance between curbs-->
+        <Parameter name="envP_Curb">
+            <Para type="float" name="Interval" value="2.0" unit="m"/>
+        </Parameter>
+        <!-- Define the scenario (link to VTD 3D Database)-->
+        <Parameter name="EnvP_VTDScenario">
+            <Para type="string" name="Scenariofile" value="ParkCity_01.xml" unit=""/>
+        </Parameter>
+        <!-- Defines several parking places-->
+        <Parameter name="EnvP_ParkingBay">
+            <Para type="string" name="Id" value="ParkingBay1" unit=""/>
+            <Para type="float" name="Rotation" value="0.0" unit="deg"/>
+            <Para type="float" name="Length" value="6.0" unit="m"/>
+            <Para type="float" name="Width" value="3.0" unit="m"/>
+            <Para type="float" name="ShearingAngle" value="0.0" unit="deg"/>
+            <Para type="ui32" name="BorderColor" value="0xFFFFFF" unit=""/>
+            <Para type="enum" name="BorderStyle" value="Solid" unit=""/>
+            <Para type="float" name="BorderWidth" value="0.1" unit="m"/>
+            <Para type="enum" name="CornerLayout" value="I" unit=""/>
+            <Para type="ui8" name="Repetition" value="4" unit=""/>
+            <Para type="float" name="Spacing" value="0" unit="m"/>
+            <Para type="float" name="ArrangementAngle" value="0.0" unit="deg"/>
+        </Parameter>
+        <Parameter name="EnvP_ParkingBay">
+            <Para type="string" name="Id" value="ParkingBay2" unit=""/>
+            <Para type="float" name="Rotation" value="90.0" unit="deg"/>
+            <Para type="float" name="Length" value="6.0" unit="m"/>
+            <Para type="float" name="Width" value="3.0" unit="m"/>
+            <Para type="float" name="ShearingAngle" value="0.0" unit="deg"/>
+            <Para type="ui32" name="BorderColor" value="0xFFFFFF" unit=""/>
+            <Para type="enum" name="BorderStyle" value="Solid" unit=""/>
+            <Para type="float" name="BorderWidth" value="0.1" unit="m"/>
+            <Para type="enum" name="CornerLayout" value="I" unit=""/>
+            <Para type="ui8" name="Repetition" value="4" unit=""/>
+            <Para type="float" name="Spacing" value="0" unit="m"/>
+            <Para type="float" name="ArrangementAngle" value="0.0" unit="deg"/>
+        </Parameter>
+    </ParameterList>
+    <!-- Positioning cars on parking spaces and street-->
+    <State id="0">
+        <Action name="Obj_SetActivationState">
+            <ActionPara type="enum" name="ObjectID" value="Obj1" unit=""/>
+            <ActionPara type="enum" name="State" value="Active" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="ParkingBay" unit=""/>
+            <ActionPara type="float" name="PositionX" value="0.0" unit="m"/>
+            <ActionPara type="float" name="PositionY" value="0.0" unit="m"/>
+            <ActionPara type="float" name="Angle" value="0.0" unit="deg"/>
+            <ActionPara type="enum" name="ObjectClass" value="Kompaktklasse" unit=""/>
+            <ActionPara type="ui8" name="ParkingBayId" value="0" unit=""/>
+            <ActionPara type="ui8" name="ParkingSpaceId" value="0" unit=""/>
+        </Action>
+        <Action name="Obj_SetActivationState">
+            <ActionPara type="enum" name="ObjectID" value="Obj2" unit=""/>
+            <ActionPara type="enum" name="State" value="Active" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="ParkingBay" unit=""/>
+            <ActionPara type="float" name="PositionX" value="0.0" unit="m"/>
+            <ActionPara type="float" name="PositionY" value="0.0" unit="m"/>
+            <ActionPara type="float" name="Angle" value="0.0" unit="deg"/>
+            <ActionPara type="enum" name="ObjectClass" value="Kompaktklasse" unit=""/>
+            <ActionPara type="ui8" name="ParkingBayId" value="0" unit=""/>
+            <ActionPara type="ui8" name="ParkingSpaceId" value="2" unit=""/>
+        </Action>
+        <Action name="Obj_SetActivationState">
+            <ActionPara type="enum" name="ObjectID" value="Obj3" unit=""/>
+            <ActionPara type="enum" name="State" value="Active" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="ParkingBay" unit=""/>
+            <ActionPara type="float" name="PositionX" value="0.0" unit="m"/>
+            <ActionPara type="float" name="PositionY" value="0.0" unit="m"/>
+            <ActionPara type="float" name="Angle" value="0.0" unit="deg"/>
+            <ActionPara type="enum" name="ObjectClass" value="Kompaktklasse" unit=""/>
+            <ActionPara type="ui8" name="ParkingBayId" value="0" unit=""/>
+            <ActionPara type="ui8" name="ParkingSpaceId" value="4" unit=""/>
+        </Action>
+        <Action name="Obj_SetActivationState">
+            <ActionPara type="enum" name="ObjectID" value="Obj4" unit=""/>
+            <ActionPara type="enum" name="State" value="Active" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="ParkingBay" unit=""/>
+            <ActionPara type="float" name="PositionX" value="0.0" unit="m"/>
+            <ActionPara type="float" name="PositionY" value="0.0" unit="m"/>
+            <ActionPara type="float" name="Angle" value="0.0" unit="deg"/>
+            <ActionPara type="enum" name="ObjectClass" value="Kompaktklasse" unit=""/>
+            <ActionPara type="ui8" name="ParkingBayId" value="1" unit=""/>
+            <ActionPara type="ui8" name="ParkingSpaceId" value="0" unit=""/>
+        </Action>
+        <Action name="Obj_SetActivationState">
+            <ActionPara type="enum" name="ObjectID" value="Obj5" unit=""/>
+            <ActionPara type="enum" name="State" value="Active" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="ParkingBay" unit=""/>
+            <ActionPara type="float" name="PositionX" value="0.0" unit="m"/>
+            <ActionPara type="float" name="PositionY" value="0.0" unit="m"/>
+            <ActionPara type="float" name="Angle" value="0.0" unit="deg"/>
+            <ActionPara type="enum" name="ObjectClass" value="Kompaktklasse" unit=""/>
+            <ActionPara type="ui8" name="ParkingBayId" value="1" unit=""/>
+            <ActionPara type="ui8" name="ParkingSpaceId" value="2" unit=""/>
+        </Action>
+        <Action name="Obj_SetActivationState">
+            <ActionPara type="enum" name="ObjectID" value="Obj6" unit=""/>
+            <ActionPara type="enum" name="State" value="Active" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="ParkingBay" unit=""/>
+            <ActionPara type="float" name="PositionX" value="0.0" unit="m"/>
+            <ActionPara type="float" name="PositionY" value="0.0" unit="m"/>
+            <ActionPara type="float" name="Angle" value="0.0" unit="deg"/>
+            <ActionPara type="enum" name="ObjectClass" value="Kompaktklasse" unit=""/>
+            <ActionPara type="ui8" name="ParkingBayId" value="1" unit=""/>
+            <ActionPara type="ui8" name="ParkingSpaceId" value="4" unit=""/>
+        </Action>
+        <Action name="Obj_SetProperty">
+            <ActionPara type="enum" name="ObjectID" value="Obj1" unit=""/>
+            <ActionPara type="float" name="Length" value="5.0" unit="m"/>
+            <ActionPara type="float" name="Width" value="2.5" unit="m"/>
+        </Action>
+        <Action name="Obj_SetProperty">
+            <ActionPara type="enum" name="ObjectID" value="Obj2" unit=""/>
+            <ActionPara type="float" name="Length" value="5.0" unit="m"/>
+            <ActionPara type="float" name="Width" value="2.5" unit="m"/>
+        </Action>
+        <Action name="Obj_SetProperty">
+            <ActionPara type="enum" name="ObjectID" value="Obj3" unit=""/>
+            <ActionPara type="float" name="Length" value="5.0" unit="m"/>
+            <ActionPara type="float" name="Width" value="2.5" unit="m"/>
+        </Action>
+        <Action name="Obj_SetProperty">
+            <ActionPara type="enum" name="ObjectID" value="Obj4" unit=""/>
+            <ActionPara type="float" name="Length" value="5.0" unit="m"/>
+            <ActionPara type="float" name="Width" value="2.5" unit="m"/>
+        </Action>
+        <Action name="Obj_SetProperty">
+            <ActionPara type="enum" name="ObjectID" value="Obj5" unit=""/>
+            <ActionPara type="float" name="Length" value="5.0" unit="m"/>
+            <ActionPara type="float" name="Width" value="2.5" unit="m"/>
+        </Action>
+        <Action name="Obj_SetProperty">
+            <ActionPara type="enum" name="ObjectID" value="Obj6" unit=""/>
+            <ActionPara type="float" name="Length" value="4.8" unit="m"/>
+            <ActionPara type="float" name="Width" value="2.5" unit="m"/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1" unit="s"/>
+        </Event>
+    </State>
+    <State id="1">
+        <Action name="Dri_PrepareVehicle"/>
+        <Event name="E_PrepareVehicle"/>
+    </State>
+    <State id="2">
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="2" unit="s"/>
+        </Event>
+    </State>
+    <State id="3">
+        <Action name="Dri_SwitchGear">
+            <ActionPara type="enum" name="Position" value="P" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="2" unit="s"/>
+        </Event>
+    </State>
+    <State id="4">
+        <Action name="Dri_SetIgnitionState">
+            <ActionPara type="enum" name="State" value="IGN_ACC" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1.0" unit="s"/>
+        </Event>
+    </State>
+    <State id="5">
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1.0" unit="s"/>
+        </Event>
+    </State>
+    <State id="6">
+        <Action name="Dri_SetIgnitionState">
+            <ActionPara type="enum" name="State" value="IGN_OFF" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1.0" unit="s"/>
+        </Event>
+    </State>
+    <State id="7">
+        <Action name="Dri_SetIgnitionState">
+            <ActionPara type="enum" name="State" value="IGN_ACC" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1.0" unit="s"/>
+        </Event>
+    </State>
+    <State id="8">
+        <Action name="Dri_SetIgnitionState">
+            <ActionPara type="enum" name="State" value="IGN_START" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1.0" unit="s"/>
+        </Event>
+    </State>
+    <State id="9">
+        <Action name="Dri_SetIgnitionState">
+            <ActionPara type="enum" name="State" value="IGN_ON" unit=""/>
+        </Action>
+        <Rule type="SignalCmp" name="ISw_Stat_Default">
+            <RulePara type="string" name="SignalName" value="ISw_Stat" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="5" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1.0" unit="s"/>
+        </Event>
+    </State>
+    <!-- Generation of EBTB snippet for _set driving position_[D] Successful-->
+    <State id="10">
+        <Action name="Dri_SwitchGear">
+            <ActionPara type="enum" name="Position" value="D" unit=""/>
+        </Action>
+        <Rule type="SignalCmp" name="ISw_Stat_Default">
+            <RulePara type="string" name="SignalName" value="ISw_Stat" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="4" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_PTS_OFF_Sw_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="Park_PTS_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_RemLocalList_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="PARK_RemLocalList_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_RemLocalPosn_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="PARK_RemLocalPosn_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_SoftKey_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="Park_SoftKey_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="CPF_UserOpen_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="CPF_UserOpen_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="HU_Audio_Output_Stat_Park_ST3">
+            <RulePara type="string" name="SignalName" value="HU_Audio_Output_Stat_Park_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_Alpha_Model_HU_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="Park_Alpha_Model_HU_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_BackKeyPsd_HU_ST3">
+            <RulePara type="string" name="SignalName" value="Park_BackKeyPsd_HU_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_ConfirmedKeyPsd_HU_ST3">
+            <RulePara type="string" name="SignalName" value="Park_ConfirmedKeyPsd_HU_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_DAA_OFF_Sw_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="Park_DAA_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_MSP_OFF_Sw_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="Park_MSP_OFF_Sw_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_Hitch_KinkAngl_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="Park_Hitch_KinkAngl_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_HPLrnTrajBtn_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="Park_HPLrnTrajBtn_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_PartA_Content_HU_Rq_ST3">
+            <RulePara type="string" name="SignalName" value="Park_PartA_Content_HU_Rq_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="Park_PDDImageMem_Ack_ST3">
+            <RulePara type="string" name="SignalName" value="Park_PDDImageMem_Ack_ST3" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="0" unit=""/>
+            <RulePara type="enum" name="Mode" value="any" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0" unit=""/>
+        </Rule>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="10" unit="s"/>
+        </Event>
+    </State>
+    <State id="11">
+        <Action name="Dri_SetParkSwitchState">
+            <ActionPara type="enum" name="State" value="PSD" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="0.75" unit="s"/>
+        </Event>
+    </State>
+    <State id="12">
+        <Action name="Dri_SetDisplayView">
+            <ActionPara type="enum" name="ParkView" value="ON_PARK_OPTION" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1" unit="s"/>
+        </Event>
+    </State>
+    <!-- Generation of EBTB snippet for _drive with speed_[<=35 kph] Successful-->
+    <State id="13">
+        <Action name="Dri_SetSpeedCtrl">
+            <ActionPara type="float" name="Velocity" value="8" unit="km/h"/>
+            <ActionPara type="enum" name="VelocityType" value="Vreal" unit=""/>
+            <ActionPara type="enum" name="Controller" value="csRobust" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="25" unit="s"/>
+        </Event>
+    </State>
+    <State id="14">
+        <Action name="Dri_SetBrakePedal">
+            <ActionPara type="float" name="Position" value="100" unit="%"/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="3" unit="s"/>
+        </Event>
+    </State>
+    <State id="15">
+        <Action name="Dri_SetSteeringWheelTorque">
+            <ActionPara type="float" name="Torque" value="0.0" unit="Nm"/>
+            <ActionPara type="enum" name="TransitionType" value="Step" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1" unit="s"/>
+        </Event>
+    </State>
+    <!-- Generation of EBTB snippet for _press ParkHardKey_[PSD] Successful-->
+    <State id="16">
+        <Action name="Dri_SetParkSwitchState">
+            <ActionPara type="enum" name="State" value="PSD" unit=""/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="0.75" unit="s"/>
+        </Event>
+    </State>
+    <!-- Generation of EBTB snippet for _release brake_ Successful-->
+    <State id="17">
+        <Action name="Dri_SetBrakePedal">
+            <ActionPara type="float" name="Position" value="0" unit="%"/>
+        </Action>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1" unit="s"/>
+        </Event>
+    </State>
+    <State id="1000" final="true"/>
+</Testcase>

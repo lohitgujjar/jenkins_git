@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathList>
+	<Path>
+		<Id>1</Id>
+		<RoadId>1</RoadId>
+		<RoadId>6</RoadId>
+        <RoadId>2</RoadId>
+
+	</Path>
+ 
+</PathList>

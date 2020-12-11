@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lmr id="ALC_doppelkurve" version="1.0">
+    <header>
+        <author>Lohit</author>
+        <timestamp>1596612192</timestamp>
+        <xodrFile>ALC_doppelkurve.xodr</xodrFile>
+    </header>
+    <routes>
+        <route name="path_1" startRoadId="1">
+            <road id="1" successor="2" />
+            <road id="2" />
+        </route>
+    </routes>
+    <landmarks>
+        <landmark name="path_1_start" type="none" roadId="1" ds="1.40657341997109996967e+00" t="0.00000000000000000000e+00" />
+        <landmark name="path_1_end" type="none" roadId="2" ds="5.68717906109157027572e+01" t="0.00000000000000000000e+00" />
+    </landmarks>
+    <parkingbays>
+        <parkingbay positionname="ParkingBay" x="1.82263635593583188665e+01" y="3.53266995638224479137e+00" />
+        <parkingbay positionname="ParkingBay1" x="1.81701449379230624004e+01" y="2.69187332413675095566e-01" />
+    </parkingbays>
+</lmr>

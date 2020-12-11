@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lmr id="CAQ_Junction_V3_long_LATEST" version="1.0">
+    <header>
+        <author>AGOTIKE</author>
+        <timestamp>1573146578</timestamp>
+        <xodrFile>CAQ_Junction_V3_long_LATEST.xodr</xodrFile>
+    </header>
+    <routes>
+        <route name="sys_path" startRoadId="1">
+            <road id="1" successor="7" />
+            <road id="7" successor="2" />
+            <road id="2" />
+        </route>
+        <route name="nearside_path" startRoadId="4">
+            <road id="4" successor="34" />
+            <road id="34" successor="3" />
+            <road id="3" />
+        </route>
+        <route name="farside_path" startRoadId="3">
+            <road id="3" successor="25" />
+            <road id="25" successor="4" />
+            <road id="4" />
+        </route>
+    </routes>
+    <landmarks>
+        <landmark name="sys_path_start" type="none" roadId="1" ds="2.10134008473148087282e-001" t="0.00000000000000000000e+000" />
+        <landmark name="sys_path_end" type="none" roadId="2" ds="1.49713450264471248374e-001" t="0.00000000000000000000e+000" />
+        <landmark name="nearside_path_start" type="none" roadId="4" ds="2.39980443487354644372e-001" t="0.00000000000000000000e+000" />
+        <landmark name="nearside_path_end" type="none" roadId="3" ds="1.50048111548017004679e-001" t="0.00000000000000000000e+000" />
+        <landmark name="farside_path_start" type="none" roadId="3" ds="1.66927847359602310462e-001" t="0.00000000000000000000e+000" />
+        <landmark name="farside_path_end" type="none" roadId="4" ds="2.27281459362416282666e-001" t="0.00000000000000000000e+000" />
+        <landmark name="100_objmove" type="none" roadId="1" ds="400" t="0.00000000000000000000e+000" />
+        <landmark name="110_objmove" type="none" roadId="1" ds="500" t="0.00000000000000000000e+000" />
+        <landmark name="120_objmove" type="none" roadId="1" ds="600" t="0.00000000000000000000e+000" />
+        <landmark name="150_objmove" type="none" roadId="1" ds="800" t="0.00000000000000000000e+000" />
+    </landmarks>
+</lmr>

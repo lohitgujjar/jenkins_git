@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<Testcase descr="RM779" version="" TestEnv="2.13">
+
+    <ParameterList version="2.13" descr="...">
+
+        <!-- Parameter trkP_Track immer zuerst aufrefen -->
+        <Parameter name="trkP_Track">
+            <Para name="NetworkFile" type="string" value="SmartDB.2011.xodr" unit="-"/>
+            <Para name="PathListFile" type="string" value="Pfadliste.xml" unit="-"/>
+        </Parameter> 
+
+        <Parameter name="EnvP_ParkingBay">
+            <Para name="Id" type="ui8" value="0" unit=""/>
+            <Para name="PositionX" type="float" value="-1622" unit="m"/>
+            <Para name="PositionY" type="float" value="-590.0" unit="m"/>
+            <Para name="Rotation" type="float" value="0.0" unit="deg"/>
+            <Para name="Length" type="float" value="6.0" unit="m"/>
+            <Para name="Width" type="float" value="4.0" unit="m"/>
+            <Para name="ShearingAngle" type="float" value="-30.0" unit="deg"/>
+            <Para name="BorderColor" type="ui32" value="0xFFFFFF" unit="-"/>
+            <Para name="BorderStyle" type="enum" value="Solid" unit="-"/>
+            <Para name="BorderWidth" type="float" value="0.1" unit="m"/>
+            <Para name="CornerLayout" type="enum" value="I" unit="-"/>
+            <Para name="Repetition" type="ui8" value="1" unit="-"/>
+            <Para name="Spacing" type="float" value="0.4" unit="m"/>
+            <Para name="ArrangementAngle" type="float" value="0.0" unit="deg"/>
+        </Parameter>
+
+        <Parameter name="EnvP_ParkingBay">
+            <Para name="Id" type="ui8" value="1" unit=""/>
+            <Para name="PositionX" type="float" value="-1622" unit="m"/>
+            <Para name="PositionY" type="float" value="-600.0" unit="m"/>
+            <Para name="Rotation" type="float" value="0.0" unit="deg"/>
+            <Para name="Length" type="float" value="6.0" unit="m"/>
+            <Para name="Width" type="float" value="4.0" unit="m"/>
+            <Para name="ShearingAngle" type="float" value="-30.0" unit="deg"/>
+            <Para name="BorderColor" type="ui32" value="0xFFFFFF" unit="-"/>
+            <Para name="BorderStyle" type="enum" value="Solid" unit="-"/>
+            <Para name="BorderWidth" type="float" value="0.1" unit="m"/>
+            <Para name="CornerLayout" type="enum" value="X" unit="-"/>
+            <Para name="Repetition" type="ui8" value="1" unit="-"/>
+            <Para name="Spacing" type="float" value="0.4" unit="m"/>
+            <Para name="ArrangementAngle" type="float" value="0.0" unit="deg"/>
+        </Parameter>
+
+        <Parameter name="EnvP_ParkingBay">
+            <Para name="Id" type="ui8" value="2" unit=""/>
+            <Para name="PositionX" type="float" value="-1622" unit="m"/>
+            <Para name="PositionY" type="float" value="-610.0" unit="m"/>
+            <Para name="Rotation" type="float" value="0.0" unit="deg"/>
+            <Para name="Length" type="float" value="6.0" unit="m"/>
+            <Para name="Width" type="float" value="4.0" unit="m"/>
+            <Para name="ShearingAngle" type="float" value="-30.0" unit="deg"/>
+            <Para name="BorderColor" type="ui32" value="0xFFFFFF" unit="-"/>
+            <Para name="BorderStyle" type="enum" value="Solid" unit="-"/>
+            <Para name="BorderWidth" type="float" value="0.1" unit="m"/>
+            <Para name="CornerLayout" type="enum" value="T" unit="-"/>
+            <Para name="Repetition" type="ui8" value="1" unit="-"/>
+            <Para name="Spacing" type="float" value="0.4" unit="m"/>
+            <Para name="ArrangementAngle" type="float" value="0.0" unit="deg"/>
+        </Parameter>
+
+        <Parameter name="EnvP_ParkingBay">
+            <Para name="Id" type="ui8" value="3" unit=""/>
+            <Para name="PositionX" type="float" value="-1622" unit="m"/>
+            <Para name="PositionY" type="float" value="-620.0" unit="m"/>
+            <Para name="Rotation" type="float" value="0.0" unit="deg"/>
+            <Para name="Length" type="float" value="6.0" unit="m"/>
+            <Para name="Width" type="float" value="4.0" unit="m"/>
+            <Para name="ShearingAngle" type="float" value="-30.0" unit="deg"/>
+            <Para name="BorderColor" type="ui32" value="0xFFFFFF" unit="-"/>
+            <Para name="BorderStyle" type="enum" value="dashed" unit="-"/>
+            <Para name="BorderWidth" type="float" value="0.15" unit="m"/>
+            <Para name="CornerLayout" type="enum" value="L" unit="-"/>
+            <Para name="Repetition" type="ui8" value="1" unit="-"/>
+            <Para name="Spacing" type="float" value="0.4" unit="m"/>
+            <Para name="ArrangementAngle" type="float" value="0.0" unit="deg"/>
+        </Parameter>
+
+        <Parameter name="EnvP_ParkingBay">
+            <Para name="Id" type="ui8" value="4" unit=""/>
+            <Para name="PositionX" type="float" value="-1622" unit="m"/>
+            <Para name="PositionY" type="float" value="-630.0" unit="m"/>
+            <Para name="Rotation" type="float" value="0.0" unit="deg"/>
+            <Para name="Length" type="float" value="6.0" unit="m"/>
+            <Para name="Width" type="float" value="4.0" unit="m"/>
+            <Para name="ShearingAngle" type="float" value="-30.0" unit="deg"/>
+            <Para name="BorderColor" type="ui32" value="0xFFFFFF" unit="-"/>
+            <Para name="BorderStyle" type="enum" value="double" unit="-"/>
+            <Para name="BorderWidth" type="float" value="0.1" unit="m"/>
+            <Para name="CornerLayout" type="enum" value="I" unit="-"/>
+            <Para name="Repetition" type="ui8" value="1" unit="-"/>
+            <Para name="Spacing" type="float" value="0.4" unit="m"/>
+            <Para name="ArrangementAngle" type="float" value="0.0" unit="deg"/>
+        </Parameter>
+
+        <Parameter name="EnvP_ParkingBay">
+            <Para name="Id" type="ui8" value="5" unit=""/>
+            <Para name="PositionX" type="float" value="-1622" unit="m"/>
+            <Para name="PositionY" type="float" value="-640.0" unit="m"/>
+            <Para name="Rotation" type="float" value="0.0" unit="deg"/>
+            <Para name="Length" type="float" value="6.0" unit="m"/>
+            <Para name="Width" type="float" value="4.0" unit="m"/>
+            <Para name="ShearingAngle" type="float" value="-30.0" unit="deg"/>
+            <Para name="BorderColor" type="ui32" value="0xFFFFFF" unit="-"/>
+            <Para name="BorderStyle" type="enum" value="dotted" unit="-"/>
+            <Para name="BorderWidth" type="float" value="0.15" unit="m"/>
+            <Para name="CornerLayout" type="enum" value="L" unit="-"/>
+            <Para name="Repetition" type="ui8" value="1" unit="-"/>
+            <Para name="Spacing" type="float" value="0.4" unit="m"/>
+            <Para name="ArrangementAngle" type="float" value="0.0" unit="deg"/>
+        </Parameter>
+
+        <Parameter name="envP_ParkingBayStyle">
+            <Para name="Id" type="ui8" value="0" unit=""/>
+            <Para name="Space" type="enum" value="all" unit=""/>
+            <Para name="BorderStyleC" type="enum" value="none" unit=""/>
+        </Parameter>
+        <Parameter name="envP_ParkingBayStyle">
+            <Para name="Id" type="ui8" value="1" unit=""/>
+            <Para name="Space" type="enum" value="all" unit=""/>
+            <Para name="BorderStyleC" type="enum" value="none" unit=""/>
+            <Para name="CornerLayoutC" type="enum" value="none" unit=""/>
+            <Para name="CornerLayoutD" type="enum" value="none" unit=""/>
+        </Parameter>
+        <Parameter name="envP_ParkingBayStyle">
+            <Para name="Id" type="ui8" value="2" unit=""/>
+            <Para name="Space" type="enum" value="all" unit=""/>
+            <Para name="BorderStyleC" type="enum" value="none" unit=""/>
+            <Para name="CornerLayoutA" type="enum" value="none" unit=""/>
+            <Para name="CornerLayoutB" type="enum" value="none" unit=""/>
+        </Parameter>
+        <Parameter name="envP_ParkingBayStyle">
+            <Para name="Id" type="ui8" value="3" unit=""/>
+            <Para name="Space" type="enum" value="all" unit=""/>
+            <Para name="BorderStyleC" type="enum" value="none" unit=""/>
+        </Parameter>
+        <Parameter name="envP_ParkingBayStyle">
+            <Para name="Id" type="ui8" value="4" unit=""/>
+            <Para name="Space" type="enum" value="all" unit=""/>
+            <Para name="BorderStyleC" type="enum" value="none" unit=""/>
+        </Parameter>
+        <Parameter name="envP_ParkingBayStyle">
+            <Para name="Id" type="ui8" value="5" unit=""/>
+            <Para name="Space" type="enum" value="all" unit=""/>
+            <Para name="BorderStyleC" type="enum" value="none" unit=""/>
+        </Parameter>
+
+    </ParameterList>
+
+    <State id="0">
+        <Event name="E_time">
+            <EventPara name="StateTime" type="float" value="10" unit="s"/>
+        </Event>
+    </State>
+    <State id="4" final="true"/>
+</Testcase>

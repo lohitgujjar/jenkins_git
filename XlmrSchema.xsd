@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="lmr">
+    <xs:complexType>
+      <xs:sequence minOccurs="1" maxOccurs="1">
+
+        <xs:element name="header">
+          <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+              <xs:element name="author" type="xs:string">
+              </xs:element>
+              <xs:element name="xodrhash" type="xs:string" minOccurs="0" maxOccurs="1">
+              </xs:element>
+              <xs:element name="timestamp" type="xs:unsignedInt">
+              </xs:element>
+              <xs:element name="xodrFile" type="xs:string">
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="trajectories" minOccurs="0">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="trajectory">
+                <xs:complexType>
+                  <xs:sequence minOccurs="2" maxOccurs="unbounded">
+                    <xs:element name="point">
+                      <xs:complexType>
+                        <xs:attribute name="x" type="xs:double" use="required"/>
+                        <xs:attribute name="y" type="xs:double" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="laneOffset">
+                <xs:complexType>
+                  <xs:sequence minOccurs="2" maxOccurs="unbounded">
+                    <xs:element name="point">
+                      <xs:complexType>
+                        <xs:attribute name="distance" type="xs:double" use="required"/>
+                        <xs:attribute name="offset" type="xs:double" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="routes">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="route">
+                <xs:complexType>
+                  <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                    <xs:element name="road">
+                      <xs:complexType>
+                      <xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+                      <xs:attribute name="successor" type="xs:unsignedInt" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="waypoint" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                        <xs:attribute name="roadId" type="xs:unsignedInt" use="required"/>
+                        <xs:attribute name="ds" type="xs:double" use="required"/>
+                        <xs:attribute name="t" type="xs:double" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required"/>
+                  <xs:attribute name="startRoadId" type="xs:unsignedInt" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="landmarks">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="landmark">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string" use="required"/>
+                  <xs:attribute name="type" type="xs:string" use="required"/>
+                  <xs:attribute name="roadId" type="xs:unsignedInt" use="required"/>
+                  <xs:attribute name="ds" type="xs:double" use="required"/>
+                  <xs:attribute name="t" type="xs:double" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>     
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="parkingbays" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="parkingbay">
+                <xs:complexType>
+                  <xs:attribute name="positionname" type="xs:string" use="required"/>
+                  <xs:attribute name="x" type="xs:double" use="required"/>
+                  <xs:attribute name="y" type="xs:double" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>     
+          </xs:complexType>
+        </xs:element>
+        
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" use="required"/>
+      <xs:attribute name="id" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

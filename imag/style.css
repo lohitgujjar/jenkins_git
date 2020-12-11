@@ -1,0 +1,83 @@
+<style type="text/css">
+
+.tabelle1 {
+    border: 2px solid #000000;
+}
+
+.tabelle1 th {
+    font: bold 14px arial,"dejaVu sans";
+    padding: 3px;
+    background-color: #D2D2D2;
+    border: 1px solid #848484;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+}
+
+.tabelle1 td {
+    font: normal 14px arial,"dejaVu sans";
+    padding: 5px 5px 1px 5px;
+    background-color: #F2F2F2;
+    border: 1px solid #848484;
+    line-height: 130%;
+    text-align: left;
+}
+
+.titel {
+    left: 200px;
+    top: 40px;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: #FFFFFF;
+    line-height: 140%;
+    letter-spacing: 1px;
+}
+
+.header {
+    width: 100%;
+    background-image: url(logo_mittel.png);
+    background-color: #367e9c;
+    background-repeat: no-repeat;
+    background-position: right top;
+    font: bold 32px arial,"dejaVu sans";
+    color: #FAFAFA;
+    padding-bottom: 5px;
+}
+
+.header h1 {
+    margin: 0px;
+    font: bold 32px arial,"dejaVu sans";
+    text-align: center
+}
+
+.section {
+    font: bold 16px arial,"dejavu sans";
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+.body {
+    padding-left: 10px;
+    font-family: "arial";
+    font-weight: normal;
+    font-size: 10pt;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+div.graphic{
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+</style>

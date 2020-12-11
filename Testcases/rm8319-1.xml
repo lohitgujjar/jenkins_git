@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Testcase TestEnv="2.13" descr="CAQ-TS-13650" version="3.0">
+    <ParameterList>
+        <Parameter name="envP_RoadNetwork">
+            <Para type="string" name="RoadNetworkFile" value="rm8319.xodr" unit=""/>
+            <Para type="string" name="XlmrFile" value="rm8319.xlmr" unit=""/>
+            <Para type="string" name="Route" value="sys_path" unit=""/>
+            <Para type="enum" name="LongitudinalAxis" value="front" unit=""/>
+            <Para type="enum" name="SideAxis" value="middle" unit=""/>
+            <Para type="string" name="LandmarkStart" value="sys_path_start" unit=""/>
+            <Para type="float" name="LandmarkOffset" value="5" unit="m"/>
+            <Para type="enum" name="LaneSelection" value="right1" unit=""/>
+            <Para type="enum" name="LaneAlignment" value="middle" unit=""/>
+            <Para type="float" name="LaneOffset" value="0" unit="m"/>
+        </Parameter>
+        <Parameter name="objP_Setup">
+            <Para type="enum" name="ObjectId" value="Obj1" unit=""/>
+            <Para type="enum" name="CollisionDetection" value="on" unit=""/>
+            <Para type="enum" name="Class" value="VEHICLE_CAR" unit=""/>
+        </Parameter>
+    </ParameterList>
+
+    <State id="1">
+        <Action name="Dri_PrepareVehicle"/>
+        <Event name="E_PrepareVehicle"/>
+    </State>
+
+     <State id="2">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="AAAMode" value="Off" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="3">
+        <Rule name="AAAMode_Off" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_AAAMd_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="0" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="4">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+
+     <State id="5">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="AAAMode" value="On" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="6">
+        <Rule name="AAAMode_On" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_AAAMd_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="7">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="AttenuationModeWarningReverseGear" value="Off" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="8">
+        <Rule name="AttenuationModeWarningReverseGear_Off" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_AttenuatMdRevGear_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="0" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="9">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="AttenuationModeWarningReverseGear" value="Attenuat1" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="10">
+        <Rule name="AttenuationModeWarningReverseGear_Attenuat1" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_AttenuatMdRevGear_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+
+     <State id="11">
+     <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="12">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="AttenuationModeWarningReverseGear" value="Attenuat2" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="13">
+        <Rule name="AttenuationModeWarningReverseGear_Attenuat2" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_AttenuatMdRevGear_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="2" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State> 
+
+    <State id="14">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="AttenuationModeWarning" value="Off" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="15">
+        <Rule name="AttenuationModeWarning_Off" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_AttenuatMdWarn_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="0" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State> 
+
+    <State id="16">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="AttenuationModeWarning" value="Attenuat1" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="17">
+        <Rule name="AttenuationModeWarning_Attenuat1" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_AttenuatMdWarn_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="18">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event> 
+    </State>
+    
+    <State id="19">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="AttenuationModeWarning" value="Attenuat2" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="20">
+        <Rule name="AttenuationModeWarning_Attenuat2" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_AttenuatMdWarn_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="2" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State> 
+
+     <State id="21">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="AutomaticCameraFocus" value="Off" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="22">
+        <Rule name="AutomaticCameraFocus_Off" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_AutoCam_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="0" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="23">
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.6" unit="s"/>
+        </Event>
+    </State>
+
+     <State id="24">
+        <Action name="Dri_SetHeadUnitSettings">
+            <ActionPara type="enum" name="AutomaticCameraFocus" value="On" unit="-"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.5" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="25">
+        <Rule name="AutomaticCameraFocus_On" type="SignalCmp">
+            <RulePara name="Mode" type="enum" value="ever" unit=""/>
+            <RulePara name="Operator" type="enum" value="equal" unit=""/>
+            <RulePara name="SignalName" type="string" value="Park_AutoCam_Rq_HU_ST3" unit=""/>
+            <RulePara name="ComparedValue" type="string" value="1" unit=""/>
+        </Rule>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+
+    <State id="10" final="true"/>
+</Testcase>

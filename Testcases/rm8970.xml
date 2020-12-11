@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Testcase TestEnv="2.13" descr="2" version="Revision: 1.0">
+    <!-- "STAR_3_CHASSIS_de_FlexRay_ECC_2019_5a" used for script generation-->
+    <!-- "V223" Selected for script generation-->
+    <!-- "RoadNetwork_Test.xml" Selected for script generation-->
+    <ParameterList descr="..." version="2.13">
+        <Parameter name="EnvP_RoadNetwork">
+            <Para type="string" name="RoadNetworkFile" value="rm8970.xodr" unit=""/>
+            <Para type="string" name="XlmrFile" value="rm8970.xlmr" unit=""/>
+            <Para type="string" name="Route" value="SysPath" unit=""/>
+            <Para type="string" name="LandmarkStart" value="SysPath_start" unit=""/>
+            <Para type="float" name="LandmarkOffset" value="0.0" unit="m"/>
+            <Para type="enum" name="LaneSelection" value="right1" unit=""/>
+            <Para type="float" name="LaneOffset" value="0.0" unit="m"/>
+        </Parameter>
+        <!-- Define the radial view of the DFT-Interface-->
+        <Parameter name="SimP_SightDistanceSDI">
+            <Para type="float" name="MaxVisibility" value="50.0" unit="m"/>
+        </Parameter>
+        <!-- Define the sample distance between curbs-->
+        <Parameter name="envP_Curb">
+            <Para type="float" name="Interval" value="2.0" unit="m"/>
+        </Parameter>
+        <!-- Define the scenario (link to VTD 3D Database)-->
+        <Parameter name="EnvP_VTDScenario">
+            <Para type="string" name="Scenariofile" value="ParkCity_01.xml" unit=""/>
+        </Parameter>
+        <Parameter name="EnvP_ParkingBay">
+            <Para type="string" name="Id" value="ParkingBay2" unit=""/>
+            <Para type="float" name="Rotation" value="90.0" unit="deg"/>
+            <Para type="float" name="Length" value="6.0" unit="m"/>
+            <Para type="float" name="Width" value="3.0" unit="m"/>
+            <Para type="float" name="ShearingAngle" value="0.0" unit="deg"/>
+            <Para type="ui32" name="BorderColor" value="0xFFFFFF" unit=""/>
+            <Para type="enum" name="BorderStyle" value="Solid" unit=""/>
+            <Para type="float" name="BorderWidth" value="0.1" unit="m"/>
+            <Para type="enum" name="CornerLayout" value="I" unit=""/>
+            <Para type="ui8" name="Repetition" value="0" unit=""/>
+            <Para type="float" name="Spacing" value="0" unit="m"/>
+            <Para type="float" name="ArrangementAngle" value="0.0" unit="deg"/>
+        </Parameter>
+        <Parameter name="ObjP_Setup">
+            <Para type="enum" name="ObjectID" value="Obj1" unit=""/>
+            <Para type="float" name="Width" value="0.305" unit="m"/>
+            <Para type="float" name="Length" value="3.0" unit="m"/>
+            <Para type="float" name="Height" value="0.5" unit="m"/>
+            <Para type="enum" name="CollisionDetection" value="off" unit=""/>
+            <Para type="enum" name="Class" value="VEHICLE_CAR_LIMOUSINE" unit=""/>
+            <Para type="string" name="Model" value="MercedesS_13_Silver" unit=""/>
+        </Parameter>
+        <Parameter name="ObjP_Setup">
+            <Para type="enum" name="ObjectID" value="Obj2" unit=""/>
+            <Para type="float" name="Width" value="0.305" unit="m"/>
+            <Para type="float" name="Length" value="3.0" unit="m"/>
+            <Para type="float" name="Height" value="0.5" unit="m"/>
+            <Para type="enum" name="CollisionDetection" value="off" unit=""/>
+            <Para type="enum" name="Class" value="VEHICLE_CAR_LIMOUSINE" unit=""/>
+            <Para type="string" name="Model" value="MercedesE_11_Taxi_Yellow" unit=""/>
+        </Parameter>
+        <Parameter name="ObjP_Setup">
+            <Para type="enum" name="ObjectID" value="Obj3" unit=""/>
+            <Para type="float" name="Width" value="0.2" unit="m"/>
+            <Para type="float" name="Length" value="100.0" unit="m"/>
+            <Para type="float" name="Height" value="0.15" unit="m"/>
+            <Para type="enum" name="CollisionDetection" value="off" unit=""/>
+            <Para type="enum" name="Class" value="VEHICLE_CAR_LIMOUSINE" unit=""/>
+            <Para type="string" name="Model" value="SmartForFour_14_WhiteBlack" unit=""/>
+        </Parameter>
+    </ParameterList>
+    <State id="3">
+        <Action name="Obj_Initialize">
+            <ActionPara type="enum" name="ObjectId" value="Obj1" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="ParkingBay" unit=""/>
+            <ActionPara type="string" name="ParkingBayName" value="ParkingBay2" unit=""/>
+            <ActionPara type="int" name="ParkingSpaceId" value="0" unit=""/>
+            <ActionPara type="string" name="LandmarkStart" value="SysPath_start" unit=""/>
+            <ActionPara type="string" name="Route" value="SysPath" unit=""/>
+            <ActionPara type="enum" name="LongitudinalAxis" value="Middle" unit=""/>
+            <ActionPara type="enum" name="SideAxis" value="Middle" unit=""/>
+            <ActionPara type="float" name="SideOffset" value="0.0" unit="m"/>
+            <ActionPara type="float" name="LongitudinalOffset" value="3.0" unit="m"/>
+            <ActionPara type="float" name="Angle" value="0.0" unit="deg"/>
+        </Action>
+        <Action name="Obj_Initialize">
+            <ActionPara type="enum" name="ObjectId" value="Obj2" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="ParkingBay" unit=""/>
+            <ActionPara type="string" name="ParkingBayName" value="ParkingBay2" unit=""/>
+            <ActionPara type="int" name="ParkingSpaceId" value="0" unit=""/>
+            <ActionPara type="string" name="LandmarkStart" value="SysPath_start" unit=""/>
+            <ActionPara type="string" name="Route" value="SysPath" unit=""/>
+            <ActionPara type="enum" name="LongitudinalAxis" value="middle" unit=""/>
+            <ActionPara type="enum" name="SideAxis" value="middle" unit=""/>
+            <ActionPara type="float" name="Angle" value="90.0" unit="deg"/>
+            <ActionPara type="float" name="SideOffset" value="0.0" unit="m"/>
+            <ActionPara type="float" name="LongitudinalOffset" value="-3.0" unit="m"/>
+        </Action>
+        <Action name="Obj_Initialize">
+            <ActionPara type="enum" name="ObjectId" value="Obj3" unit=""/>
+            <ActionPara type="enum" name="ReferenceSystem" value="ParkingBay" unit=""/>
+            <ActionPara type="string" name="ParkingBayName" value="ParkingBay2" unit=""/>
+            <ActionPara type="int" name="ParkingSpaceId" value="0" unit=""/>
+            <ActionPara type="string" name="LandmarkStart" value="SysPath_start" unit=""/>
+            <ActionPara type="string" name="Route" value="SysPath" unit=""/>
+            <ActionPara type="enum" name="LongitudinalAxis" value="Rear" unit=""/>
+            <ActionPara type="enum" name="SideAxis" value="middle" unit=""/>
+            <ActionPara type="float" name="Angle" value="180.0" unit="deg"/>
+            <ActionPara type="float" name="SideOffset" value="1.6" unit="m"/>
+            <ActionPara type="float" name="LongitudinalOffset" value="0.0" unit="m"/>
+        </Action>
+        <Event name="E_Time">
+            <EventPara type="float" name="StateTime" value="0.1" unit="s"/>
+        </Event>
+    </State>
+    <State id="5">
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="1" unit="s"/>
+        </Event>
+    </State>
+    <State id="2">
+        <Rule type="SignalCmp" name="State2_Rule1">
+            <RulePara type="string" name="SignalName" value="Object.w_1" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="3.14159" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.01" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="State2_Rule1">
+            <RulePara type="string" name="SignalName" value="Object.w_2" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="4.71239" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.01" unit=""/>
+        </Rule>
+        <Rule type="SignalCmp" name="State2_Rule2">
+            <RulePara type="string" name="SignalName" value="Object.w_3" unit=""/>
+            <RulePara type="enum" name="Mode" value="ever" unit=""/>
+            <RulePara type="enum" name="Operator" value="equal" unit=""/>
+            <RulePara type="string" name="ComparedValue" value="6.28319" unit=""/>
+            <RulePara type="float" name="Tolerance" value="0.01" unit=""/>
+        </Rule>
+        <Event name="E_time">
+            <EventPara type="float" name="StateTime" value="0.01" unit="s"/>
+        </Event>
+    </State>
+    <State id="1002" final="true"/>
+</Testcase>

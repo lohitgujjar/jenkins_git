@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<Testcase descr="Manipulation des Signals DRCAM_Gaze_ST3" version="$Id$" TestEnv="2.13">
+	
+	<ParameterList>
+      <Parameter name="envP_RoadNetwork">
+        <Para name="RoadNetworkFile" type="string" value="rm3259-3.xodr" unit="-"/>
+        <Para name="XlmrFile" type="string" value="rm3259-3.xlmr" unit="-"/>
+        <!--Para name="VScenarioFile" type="string" value="Parkplatz/Parkplatz_Linien.xml" unit="-"/-->
+        <Para name="Route" type="string" value="path_1" unit="-"/>
+        <Para name="LandmarkStart" type="string" value="path_1_start" unit="-"/>
+        <Para name="LandmarkOffset" type="float" value="0.00000" unit="m"/>
+        <Para name="LaneSelection" type="enum" value="ref" unit="-"/>
+        <Para name="LaneOffset" type="float" value="-1.8750000" unit="m"/>
+      </Parameter>
+	</ParameterList>
+
+	<State id="1">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="NoGaze" unit=""/>
+		</Action>
+	</State>
+
+	<State id="2">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="3">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State3_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="0" unit=""/>
+		</Rule>
+	</State>
+	<State id="4">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi01" unit=""/>
+		</Action>
+	</State>
+
+	<State id="5">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="6">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State6_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="1" unit=""/>
+		</Rule>
+	</State>
+	<State id="7">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi02" unit=""/>
+		</Action>
+	</State>
+
+	<State id="8">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="9">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State9_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="2" unit=""/>
+		</Rule>
+	</State>
+	<State id="10">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi03" unit=""/>
+		</Action>
+	</State>
+
+	<State id="11">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="12">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State12_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="3" unit=""/>
+		</Rule>
+	</State>
+	<State id="13">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi04" unit=""/>
+		</Action>
+	</State>
+
+	<State id="14">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="15">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State15_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="4" unit=""/>
+		</Rule>
+	</State>
+	<State id="16">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi05" unit=""/>
+		</Action>
+	</State>
+
+	<State id="17">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="18">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State18_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="5" unit=""/>
+		</Rule>
+	</State>
+	<State id="19">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi06" unit=""/>
+		</Action>
+	</State>
+
+	<State id="20">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="21">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State21_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="6" unit=""/>
+		</Rule>
+	</State>
+	<State id="22">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi07" unit=""/>
+		</Action>
+	</State>
+
+	<State id="23">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="24">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State24_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="7" unit=""/>
+		</Rule>
+	</State>
+	<State id="25">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi08" unit=""/>
+		</Action>
+	</State>
+
+	<State id="26">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="27">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State27_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="8" unit=""/>
+		</Rule>
+	</State>
+	<State id="28">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi09" unit=""/>
+		</Action>
+	</State>
+
+	<State id="29">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="30">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State30_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="9" unit=""/>
+		</Rule>
+	</State>
+	<State id="31">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi10" unit=""/>
+		</Action>
+	</State>
+
+	<State id="32">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="33">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State33_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="10" unit=""/>
+		</Rule>
+	</State>
+	<State id="34">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi11" unit=""/>
+		</Action>
+	</State>
+
+	<State id="35">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="36">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State36_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="11" unit=""/>
+		</Rule>
+	</State>
+	<State id="37">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi12" unit=""/>
+		</Action>
+	</State>
+
+	<State id="38">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="39">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State39_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="12" unit=""/>
+		</Rule>
+	</State>
+	<State id="40">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi13" unit=""/>
+		</Action>
+	</State>
+
+	<State id="41">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="42">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State42_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="13" unit=""/>
+		</Rule>
+	</State>
+	<State id="43">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi14" unit=""/>
+		</Action>
+	</State>
+
+	<State id="44">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="45">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State45_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="14" unit=""/>
+		</Rule>
+	</State>
+	<State id="46">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi15" unit=""/>
+		</Action>
+	</State>
+
+	<State id="47">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="48">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State48_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="15" unit=""/>
+		</Rule>
+	</State>
+	<State id="49">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi16" unit=""/>
+		</Action>
+	</State>
+
+	<State id="50">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="51">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State51_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="16" unit=""/>
+		</Rule>
+	</State>
+	<State id="52">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi17" unit=""/>
+		</Action>
+	</State>
+
+	<State id="53">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="54">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State54_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="17" unit=""/>
+		</Rule>
+	</State>
+	<State id="55">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi18" unit=""/>
+		</Action>
+	</State>
+
+	<State id="56">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="57">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State57_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="18" unit=""/>
+		</Rule>
+	</State>
+	<State id="58">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi19" unit=""/>
+		</Action>
+	</State>
+
+	<State id="59">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="60">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State60_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="19" unit=""/>
+		</Rule>
+	</State>
+	<State id="61">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi20" unit=""/>
+		</Action>
+	</State>
+
+	<State id="62">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="63">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State63_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="20" unit=""/>
+		</Rule>
+	</State>
+	<State id="64">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi21" unit=""/>
+		</Action>
+	</State>
+
+	<State id="65">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="66">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State66_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="21" unit=""/>
+		</Rule>
+	</State>
+	<State id="67">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi22" unit=""/>
+		</Action>
+	</State>
+
+	<State id="68">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="69">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State69_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="22" unit=""/>
+		</Rule>
+	</State>
+	<State id="70">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi23" unit=""/>
+		</Action>
+	</State>
+
+	<State id="71">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="72">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State72_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="23" unit=""/>
+		</Rule>
+	</State>
+	<State id="73">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi24" unit=""/>
+		</Action>
+	</State>
+
+	<State id="74">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="75">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State75_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="24" unit=""/>
+		</Rule>
+	</State>
+	<State id="76">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi25" unit=""/>
+		</Action>
+	</State>
+
+	<State id="77">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="78">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State78_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="25" unit=""/>
+		</Rule>
+	</State>
+	<State id="79">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi26" unit=""/>
+		</Action>
+	</State>
+
+	<State id="80">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="81">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State81_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="26" unit=""/>
+		</Rule>
+	</State>
+	<State id="82">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi27" unit=""/>
+		</Action>
+	</State>
+
+	<State id="83">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="84">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State84_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="27" unit=""/>
+		</Rule>
+	</State>
+	<State id="85">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi28" unit=""/>
+		</Action>
+	</State>
+
+	<State id="86">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="87">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State87_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="28" unit=""/>
+		</Rule>
+	</State>
+	<State id="88">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="Roi29" unit=""/>
+		</Action>
+	</State>
+
+	<State id="89">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="90">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State90_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="29" unit=""/>
+		</Rule>
+	</State>
+	<State id="91">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="1.0" unit="s"/>
+		</Event>
+		<!-- Aktion -->
+		<Action name="Dri_SetGazeRoi">
+			<ActionPara name="Roi" type="enum" value="NoRoi" unit=""/>
+		</Action>
+	</State>
+
+	<State id="92">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.1" unit="s"/>
+		</Event>
+	</State>
+		
+	<State id="93">
+		<!-- Event -->
+		<Event name="E_time">
+			<EventPara name="StateTime" type="float" value="0.5" unit="s"/>
+		</Event>
+		<!-- Rule -->
+		<Rule name="State93_Assert1" type="SignalCmp">
+			<RulePara name="Mode" type="enum" value="ever" unit=""/>
+			<RulePara name="Operator" type="enum" value="equal" unit=""/>
+			<RulePara name="SignalName" type="string" value="DRCAM_Gaze_ST3" unit=""/>
+			<RulePara name="ComparedValue" type="string" value="30" unit=""/>
+		</Rule>
+	</State>
+
+	<State id="94" final="true"/>
+</Testcase>

@@ -1,0 +1,56 @@
+---
+DriveSim:
+  file: DriveSim
+  sha256: 7ec5ecea42570be2963271ee6c52bcba0b4ce8d10cfcc4968dbbf02be709f64a
+  version: 5.20.36.0
+  ebtbLangVersion: develop
+
+shared:
+  SutCom:
+    file: SutCommunicationGlue.h
+    sha256: dcc30127a5bfe27387993ecae772c25db54af279d02de472827e86b573cb2388
+
+  SysVehicle:
+    file: SysVehicleDynGlue.h
+    sha256: fca980ffb72e12573da3788522982e7a5c8e9a8799d9d76739d8bdd0e82b3459
+
+  DataRecorder:
+    file: DataRecorderGlue.h
+    sha256: 0454f9bbd9af946539546996e00588dc113ef01f23f255ddb06dfa9a7de77b08
+
+  EbtbParser:
+    file: EbtbParserGlue.h
+    sha256: f317010318937a0d6e23822e94a2123ed529c69fc7881d99db6b6a6190f629f9
+
+  Pos:
+    file: PosGlue.h
+    sha256: d3288f563ff7110ebba30b40e26688fe104eecdf42f1d1e82fd58cdba12d5df1
+
+  SdiCom:
+    file: SdiComGlue.h
+    sha256: 90fc1a2e7b4500e78c86b29d6decd43f2f0489cf94f5c1fdd2ef61c7c8671303
+
+  Sensor:
+    file: SensorGlue.h
+    sha256: dcb58667a27dbb3f863a4a0c66c6826484ef9182c616dbe92ba35d8dcc311d66
+
+  SignalLogger:
+    file: signalloggerglue.h
+    sha256: 66eb6cb05137e2055145fd727b6cc943f2bff965a55a3176b521599c135e0295
+
+  SimViewer:
+    file: SimViewerGlue.h
+    sha256: 91e5d732939efcb50e47142e841cc0a26049ac9a728ec076ed597ad7dfedda4c
+
+  TrackBase:
+    file: TrackBaseGlue.h
+    sha256: 2249a0a48cc4491b64993d5e4ca3070a41f2f54fa8ee91738f1ca6390bd8189c
+
+  VtdCom:
+    file: VtdComGlue.h
+    sha256: 6e8c1b906ee9230dd581e7360755d7c368c563cac7a671d8a7339c36e6675b84
+
+  RobCom:
+    file: RobComGlue.h
+    sha256: 2f4413b71a59216adb6661d1cb8c3175679c73bc975738b7a1b3e08ca396689e
+

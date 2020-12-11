@@ -1,0 +1,10 @@
+---
+RobCom:
+  file: RobCom.so
+  sha256: 137928df90e977f7253d4253808d80c33191a6dc8f7e36bfc5019c9a607761da
+
+shared:
+  RobCom:
+    file: RobComGlue.h
+    sha256: 2f4413b71a59216adb6661d1cb8c3175679c73bc975738b7a1b3e08ca396689e
+

@@ -1,0 +1,10 @@
+---
+SignalLogger:
+  file: SignalLogger.so
+  sha256: 61579a5f58b765573a9de7366bf0e3ab1fd12ebdb8531e0a112d131098de539e
+
+shared:
+  SignalLogger:
+    file: signalloggerglue.h
+    sha256: 66eb6cb05137e2055145fd727b6cc943f2bff965a55a3176b521599c135e0295
+
